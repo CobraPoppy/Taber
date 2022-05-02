@@ -1,0 +1,192 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: auto;
+    padding: 0%;
+    box-sizing: border-box;
+
+
+}
+:root{
+    --font-padrão:'Bebas Neue';
+    --font-animada:'Pacifico';
+    --font-robot:'Roboto', sans-serif;
+    --color1: #4E25A3;
+    --color2: #A375FF; 
+    --color3: #8956F0;
+    --color4: #A39B1A;
+    --color5: #F0E756;
+}
+img{
+    width:80%;
+    display: block;
+    margin: auto;
+    
+}
+
+header{
+    background-image: linear-gradient(to bottom , var(--color1), var(--color3));
+    height: 190px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.263) ;
+
+    
+
+}
+header > h1{
+    font-family: var(--font-animada);
+    color: white;
+    font-weight: lighter;
+    font-size: 3em;
+    padding-bottom: 10px;
+}
+header > p {
+    font-family: var(--font-robot);
+    color: aliceblue;
+
+}
+nav{
+    margin-top: 30px;
+    
+    
+}
+nav ul{
+    position: relative;
+}
+nav ul li {
+    display: inline;
+    position: relative;
+    
+}
+nav ul ul li a{
+    background-image: linear-gradient(to bottom , var(--color3), var(--color1));
+}
+nav ul li a{
+    padding: 5px 5px 5px 5px;
+    margin-left: 0px;
+    background-image: linear-gradient(to bottom , var(--color3), var(--color1));
+    font-family: var(--font-robot);
+    text-decoration: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    border:solid;
+    border-color: white;
+    border-image: linear-gradient(to bottom , var(--color3), var(--color1));
+    
+
+
+    
+}
+nav> ul li a:hover{
+    
+    background: var(--color5);
+    color: var(--color1);
+    transition-duration: 0.5s;
+}
+nav> ul ul li a:hover{
+    background: var(--color5);
+    color: var(--color1);
+    transition-duration: 0.5s;
+}
+nav ul ul{
+    display: none;
+    position: absolute;
+    left: 0;
+    
+}
+nav> ul li:hover ul {
+    display: block;
+    transition-duration: ease 1s;
+}
+nav ul ul {
+    width: 115px;
+}
+nav ul ul li a{
+    display: block;
+    margin: 3px;
+    
+}
+
+
+main{
+    width: 100%;
+    height: 100%;
+    
+    background-image: linear-gradient(to bottom, var(--color5) 80%, var(--color4));
+    padding-top: 20px;
+
+}
+article{ 
+    max-width: 800px;
+    min-width: 320px ;
+    background: white;
+    border-radius: 7px;
+    padding: 15px;
+    
+}
+article >h2{
+    font-family: var(--font-animada);
+    font-weight: lighter;
+    text-align: center;
+    color: #A375FF;
+}
+article >p{
+    font-family: var(--font-robot);
+    text-align: justify;
+    padding: 7px;
+}
+
+aside > h3 { 
+    font-family: var(--font-animada);
+    text-align: center;
+    font-weight: lighter;
+    padding: 7px;
+    color: var(--color5);
+    
+
+
+}
+aside > ul {
+    list-style-position:inside ;
+    text-align: justify;
+}
+aside > ul li {
+    font-family: var(--font-robot);
+    font-size: 0.9em;
+    padding: 10px;
+    text-align: justify; 
+    color: aliceblue; 
+}
+aside > p{
+    font-family: var(--font-robot);
+    text-align: justify;
+    color: aliceblue;
+}
+aside{
+    background: var(--color2);
+    padding: 10px;
+    border-radius: 0px 20px 0px 20px;
+    box-shadow: 0px 7px 7px 3px var(--color1) ;
+    
+
+}
+aside:hover{
+    box-shadow: 0px 7px 7px 3px #4f25a341 ;
+    transition-duration: 2s;
+}
+footer{
+    background: var(--color1);
+    color: white;
+    font-family: var(--font-robot);
+    text-align: center;
+    height: 40px;
+    padding: 10px;
+
+}
+
