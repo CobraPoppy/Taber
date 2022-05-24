@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+*{
+    margin: 0 auto;
+    padding: 0 ;
+    box-sizing: border-box;
+}
+:root{
+    --font-normal: 'Neucha', cursive;
+}
+header{
+    text-align: center;
+    padding: 15px;
+    background: black;
+    color: whitesmoke;
+}
+header>h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
+    font-size: 2.7em;
+
+}
+header>p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2em;
+    padding-bottom: 50px;
+}
+header>p a {
+   
+    text-decoration: none;
+    color: wheat;
+
+}
+header>p:hover a {
+    text-decoration: underline;
+    color: darkorange;
+    transition: ease 0.4s;
+    cursor: pointer;
+}
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    font-size: 3.5vw;
+    line-height: 2em;
+    padding-left: 40px;
+    text-align: left;
+    
+}
+section>p{
+    font-family: var(--font-normal);
+    font-weight: bolder;
+    
+    
+    
+    
+}
+section.imagem>p{
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.665);
+    padding: 8px;
+    border-radius: 3px;
+    color: aliceblue;
+}
+
+section.normal p {
+    padding-bottom: 2em;
+}
+section#img01{
+    background-image: url(imagens/background001.jpg);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+section#img02{
+    background-image: url(imagens/background002.jpg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+footer{
+    width: 100vw;
+    height: 5vh;
+    text-align: center;
+    font-size: 1.3vw;
+    background: black;
+    padding: 10px;
+    color: aliceblue;
+    
+
+}
+footer>p a{
+    text-decoration: none;
+    color: white;
+}
+footer>p:hover a{
+    text-decoration: underline;
+    color: yellow;
+    transition: ease .4s;
+    
+}
