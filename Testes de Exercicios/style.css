@@ -81,18 +81,14 @@ main{
     background-color: rgb(183, 183, 183);
     padding-top: 5px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    
     
 }
-section{
-    width: 45vw;
-    display: flex;
-    flex-direction: column;
-}
+
 .artigos{
-    width: 45vw;
-    height: 15vh;
+    width: 320px;
+    height: 100px;
     background: cadetblue;
     padding: 20px;
     margin-top: 20px;
@@ -100,29 +96,18 @@ section{
     box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.309);
 }
 .artigos>img{
-    width: 15%;
+    width: 20%;
     float: left;
     display: block;
     padding: 5px;
    
 }
 .artigos>p{
-    font-size: 1.3vw;
+    font-size: 0.8em;
     text-align: justify;
     
     font-family: monospace;
     font-weight: 600;
     color: whitesmoke;
 }
-.lateral{
-    width: 20vw;
-    height: 600px;
-    background: black;
-    display: flex;
-    flex-direction: row;
-}
-@media (max-width:320px){
-    .artigos>p{
-        font-size: 1.3vw;
-    }
-}
+
