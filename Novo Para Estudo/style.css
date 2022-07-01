@@ -15,6 +15,7 @@
 body{
     width: 100%;
     height: 100%;
+    background: black;
 }
 :root{
     --font-inicial: 'Roboto', sans-serif;
@@ -55,6 +56,14 @@ body{
 .logo-topo h1{
     color: rgb(255, 0, 0);
     font-weight: lighter;
+}
+.navega-midia input{
+    border: none;
+    background: transparent;
+    padding: 20px;
+    color: red;
+    font-weight: bolder;
+    font-size: 1.5em;
 }
 .banner-main{
     width: 100vw;
