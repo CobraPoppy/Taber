@@ -125,11 +125,12 @@ input{
     justify-content: center;
     width: 93vw;
     height: 250vh;
-    background: rgba(192, 192, 192, 0.285);
+    background: rgba(76, 0, 255, 0.285);
     border-radius: 6px;
+    
 }
 .produtos{
-    background: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
     width: 250px;
     height: 290px;
     margin: 20px;
