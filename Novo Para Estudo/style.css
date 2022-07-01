@@ -118,13 +118,14 @@ input{
 
 }
 .tabela-prod{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+    justify-items: center;
     align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    width: 93vw;
-    height: 250vh;
+    width: 87vw;
+    height: 260vh;
     background: rgba(76, 0, 255, 0.285);
     border-radius: 6px;
     
@@ -202,26 +203,36 @@ footer p{
         margin-top: 18px;
         
     }
+    .tabela-prod{
+        
+    }
     
 
 }
-@media(max-width:1265px){
+@media(max-width:1360px){
     .tabela-prod{
-        
-        height: 350vh;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr ;
+        grid-gap: 5px;
+
+        height: 580vh;
     }
     
 }
-@media(max-width:980px){
+@media(max-width:1020px){
     .tabela-prod{
-        
-        height: 500vh;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 1fr 1fr ;
+        grid-gap: 5px;
+        height: 825vh;
     }
 }
-@media(max-width:650px){
+@media(max-width:670px){
     .tabela-prod{
-        
-        height: 1100vh;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr ;
+        grid-gap: 5px;
+        height: 1650vh;
     }
 }
 
