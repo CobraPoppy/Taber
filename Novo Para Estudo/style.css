@@ -25,10 +25,19 @@ body{
 }
 .indice{
     width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(indice.png) ;
+    background-size: contain;
+    background-repeat:repeat;  
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.467);
 }
 .logo-topo h1 strong{
     color: rgb(114, 67, 254); ;
     font-weight: 400;
+   
 }
 .indice-topo{
     display:  flex;
@@ -36,8 +45,8 @@ body{
     align-items: center;
     justify-content: space-evenly;
     height: 80px;
-    background-color: rgb(0, 0, 0);
-    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.467);
+    width: 600px;
+    
 }
 
 .indice-topo a{
@@ -71,8 +80,8 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: left;
-   
+    justify-content:  left;
+    padding: 20px;
     background-image: url(686126.jpg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -100,23 +109,32 @@ body{
 .busca{
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100vw;
+    height: 120px;
+    background-image: url(indice.png);
+    background-position: center center;
+
+    background-size: contain;
+   
+
    
 }
 .barra-busca{
     background-image: linear-gradient(to bottom,rgb(114, 67, 254),rgb(64, 54, 93));
-    width: 94%;
-    height: 95px;
-    border-radius: 6px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    width: 60%;
+    height: 80px;
+    border-radius: 0px;
+    border: 3px solid rgb(2, 0, 3);
+    box-shadow: 0px 0px 120px 3px rgba(107, 41, 214, 0.785);
     
 }
-.barra-busca h2{
+.barra-busca {
     color: aliceblue;
-    font-size: 2.5em;
+    font-size: 2.0em;
     text-align: center;
     font-family: var(--font-animada2);
+    
 }
 .box-tabela{
     height: 100%;
@@ -190,7 +208,7 @@ img{
 
 }
 
-@media (max-width:769px){
+@media (max-width:790px){
     .banner-main div {
         max-width: 320px;
         
@@ -203,11 +221,17 @@ img{
         display: block;
         
     }
-    .barra-busca h2{
-        font-size: 1.5em;
+    .barra-busca {
+        font-size: 1.3em;
         text-align: center;
-        margin-top: 18px;
+        padding: 10px;
         
+    }
+    .indice-topo{
+        width: 300px;
+    }
+    .logo-topo h1{
+        font-size: 1.5em;
     }
    
 
@@ -249,6 +273,7 @@ img{
         height: 100%;
         width: 100%;
     }
+    
 }
 @media(max-width:568px){
     .box-tabela{
