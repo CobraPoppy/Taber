@@ -11,14 +11,15 @@
     font-family: var(--font-inicial);
 
 }
-body{
-    background-color: black;
-}
+
 :root{
     --font-inicial: 'Roboto', sans-serif;
     --font-animada1:  'Odibee Sans', cursive;
     --font-animada2: 'Bungee Outline', cursive;
     
+}
+.indice{
+    width: 100vw;
 }
 .logo-topo h1 strong{
     color: rgb(114, 67, 254); ;
@@ -52,6 +53,7 @@ body{
     font-weight: lighter;
 }
 .banner-main{
+    width: 100vw;
     height: 69vh;
     display: flex;
     flex-direction: row;
@@ -59,7 +61,7 @@ body{
     justify-content: left;
     padding-left: 20px;
     background-image: url(686126.jpg);
-    background-position: center bottom;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -85,6 +87,7 @@ body{
 .busca{
     display: flex;
     justify-content: center;
+    width: 100vw;
    
 }
 .barra-busca{
@@ -102,32 +105,28 @@ body{
     text-align: center;
     font-family: var(--font-animada2);
 }
-input{
-    padding: 20px 15px;
-}
 .box-tabela{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 220vh;
+    width: 100vw;
+    
     background-image: url(imgbcg2.jpg);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    
 
 
 }
-.tabela-prod{
+.box-tabela{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-gap: 5px;
     justify-items: center;
-    align-items: center;
-    width: 87vw;
-    height: 260vh;
-    background: rgba(76, 0, 255, 0.285);
+    align-items: center;   
     border-radius: 6px;
+    
     
 }
 .produtos{
@@ -174,16 +173,7 @@ img{
 .navega-midia{
     display: none;
 }
-footer{
-    height: 40px;
-    background: rgb(0, 0, 0);
-    text-align: center;
-    padding: 10px;
-    color: white;
-}
-footer p{
-    color: white;
-}
+
 @media (max-width:769px){
     .banner-main div {
         max-width: 320px;
@@ -203,36 +193,50 @@ footer p{
         margin-top: 18px;
         
     }
-    .tabela-prod{
-        
-    }
-    
+   
 
 }
-@media(max-width:1360px){
-    .tabela-prod{
+@media(max-width:1350px){
+    .box-tabela{
         grid-template-columns: 1fr 1fr 1fr ;
         grid-template-rows: 1fr 1fr 1fr ;
         grid-gap: 5px;
 
-        height: 580vh;
+        
+    }
+    .box-tabela{
+        height: 350vh;
+        width: 100vw;
     }
     
 }
 @media(max-width:1020px){
-    .tabela-prod{
+    .box-tabela{
         grid-template-columns: 1fr 1fr ;
         grid-template-rows: 1fr 1fr ;
         grid-gap: 5px;
-        height: 825vh;
+        
+    }
+    .box-tabela{
+        height: 470vh;
+        width: 100vw;
     }
 }
-@media(max-width:670px){
-    .tabela-prod{
+@media(max-width:670px ){
+    .box-tabela{
         grid-template-columns: 1fr ;
         grid-template-rows: 1fr ;
         grid-gap: 5px;
-        height: 1650vh;
+        
+    }
+    .box-tabela{
+        height: 1030vh;
+        width: 100vw;
     }
 }
-
+@media(max-width:568px){
+    .box-tabela{
+        height: 1190vh;
+        width: 100vw;
+    }
+}
