@@ -21,7 +21,7 @@
                 <a href="index1.html">Login</a>
             </nav>
             <div class="navega-midia">
-                <p>nameee</p>
+                <input type="button" value="Menu" id="btn-mobile" onclick="ALA()">
             </div>
         </div>
     </header>
@@ -203,6 +203,15 @@
 
        
     </section>
+    <script>
+        let borom = window.document.getElementById('btn-mobile')
+        let LML = window.document.getElementById('navega-topo')
+        function ALA() {
+            if(LML.classList.contains("active")){
+                LML.classList.remove('active')
+            }else{LML.classList.add('active')}
+        }
+    </script>
     
 </body>
 

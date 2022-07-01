@@ -12,6 +12,10 @@
 
 }
 
+body{
+    width: 100%;
+    height: 100%;
+}
 :root{
     --font-inicial: 'Roboto', sans-serif;
     --font-animada1:  'Odibee Sans', cursive;
@@ -59,7 +63,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: left;
-    padding-left: 20px;
+   
     background-image: url(686126.jpg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -106,8 +110,8 @@
     font-family: var(--font-animada2);
 }
 .box-tabela{
-    height: 220vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     
     background-image: url(imgbcg2.jpg);
     background-position: center bottom;
@@ -173,6 +177,9 @@ img{
 .navega-midia{
     display: none;
 }
+.active{
+
+}
 
 @media (max-width:769px){
     .banner-main div {
@@ -205,8 +212,8 @@ img{
         
     }
     .box-tabela{
-        height: 350vh;
-        width: 100vw;
+        height: 100%;
+        width: 100%;
     }
     
 }
@@ -218,8 +225,8 @@ img{
         
     }
     .box-tabela{
-        height: 470vh;
-        width: 100vw;
+        height: 100%;
+        width: 100%;
     }
 }
 @media(max-width:670px ){
@@ -230,13 +237,13 @@ img{
         
     }
     .box-tabela{
-        height: 1030vh;
-        width: 100vw;
+        height: 100%;
+        width: 100%;
     }
 }
 @media(max-width:568px){
     .box-tabela{
-        height: 1190vh;
-        width: 100vw;
+        height: 100%;
+        width: 100%;
     }
 }
