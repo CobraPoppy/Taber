@@ -20,48 +20,66 @@ body{
     --font-animada2: 'Bungee Outline', cursive;
     
 }
+.logo-topo h1 strong{
+    color: rgb(114, 67, 254); ;
+    font-weight: 400;
+}
 .indice-topo{
     display:  flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: 80px;
     background-color: rgb(0, 0, 0);
-    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.467);
 }
+
 .indice-topo a{
     margin-left: 20px;
-    padding: 10px 20px;
+    padding: 5px 20px;
     font-size: 1.4em;
     text-decoration: none;
-    border: 4px solid rgb(121, 121, 202);
-    border-radius: 8px;  
-    color: rgb(121, 121, 202);
+    border-radius: 5px;  
+    color: rgb(114, 67, 254);
+    font-weight: 400;
+}
+.indice-topo a:hover{
+    border: 2px solid rgb(121, 121, 202);
+    color: aliceblue;
 }
 .logo-topo h1{
     color: rgb(255, 0, 0);
+    font-weight: lighter;
 }
 .banner-main{
     height: 69vh;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    background-image: url(./Imgs/backgeund\ banner.jpg);
+    justify-content: left;
+    padding-left: 20px;
+    background-image: url(686126.jpg);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.113) inset; 
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.524) inset; 
     
 }
-.banner-main div h2{
-    font-size: 1.9em;
-    color: aliceblue;
+.banner-main div {
+    max-width: 600px;
+    min-height: 300px;
+    background-color: rgba(0, 0, 0, 0.652);
+}
+.banner-main div p{
+    color: white;
+    text-align: justify;
+    padding: 10px;
 }
 .banner-h2 h2{
+    font-size: 1.9em;
+    color: aliceblue;
     padding: 20px;
-    background-color: black;
     font-family: var(--font-inicial);
 }
 .busca{
@@ -70,7 +88,7 @@ body{
    
 }
 .barra-busca{
-    background: rgb(100, 100, 100);
+    background-image: linear-gradient(to bottom,rgb(114, 67, 254),rgb(64, 54, 93));
     width: 94%;
     height: 95px;
     border-radius: 6px;
@@ -91,7 +109,12 @@ input{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    background-image: url(imgbcg2.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
 
 }
 .tabela-prod{
@@ -102,16 +125,21 @@ input{
     justify-content: center;
     width: 93vw;
     height: 250vh;
-    background: rgb(119, 118, 118);
+    background: rgba(192, 192, 192, 0.285);
     border-radius: 6px;
 }
 .produtos{
-    background: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
     width: 250px;
     height: 290px;
     margin: 20px;
     text-align: center;
     border-radius: 8px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.148);
+}
+.produtos h3{
+    padding: 5px;
+    font-size: 1.3em;
 }
 .bt-comprar{
     padding: 10px 10px ;
@@ -125,10 +153,74 @@ input{
     text-decoration: none;
     font-size: 1.3em;
     color: white;
+    font-weight: bold;
+}
+.bt-comprar:hover{
+    background: gold;
+    color:black;
+}
+.bt-comprar:hover a{
+    color:black; 
 }
 img{
     width: 80%;
     padding: 10px;
 }
+.navega-midia img{
+    width:20%;
+}
+.navega-midia{
+    display: none;
+}
+footer{
+    height: 40px;
+    background: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+footer p{
+    color: white;
+}
+@media (max-width:769px){
+    .banner-main div {
+        max-width: 320px;
+        
+        
+    }
+    .navega-topo{
+        display: none;
+    }
+    .navega-midia{
+        display: block;
+        
+    }
+    .barra-busca h2{
+        font-size: 1.5em;
+        text-align: center;
+        margin-top: 18px;
+        
+    }
+    
 
+}
+@media(max-width:1265px){
+    .tabela-prod{
+        
+        height: 350vh;
+    }
+    
+}
+@media(max-width:980px){
+    .tabela-prod{
+        
+        height: 500vh;
+    }
+}
+@media(max-width:650px){
+    .tabela-prod{
+        
+        height: 1100vh;
+    }
+}
 
