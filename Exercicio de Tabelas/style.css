@@ -1,0 +1,35 @@
+.Agrupar_1{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 900px;
+    height: 1440px;
+    z-index: 7;
+  }
+  .Forma_1 {
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    left: -22px;
+    top: 615px;
+    width: 593px;
+    height: 100px;
+    z-index: 6;
+  }
+  .Forma_1 {
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    left: 553px;
+    top: 599px;
+    width: 593px;
+    height: 100px;
+    z-index: 5;
+  }
+  .Forma_2 {
+    background-color: rgb(128, 128, 128);
+    position: absolute;
+    left: 554px;
+    top: 374px;
+    width: 346px;
+    height: 651px;
+    z-index: 4;
+  }
