@@ -13,10 +13,10 @@
 }
 
 body{
-    width: 100%;
     height: 100%;
+    width: 100%;
     background: black;
-    overflow-x: hidden;
+    
 }
 :root{
     --font-inicial: 'Roboto', sans-serif;
@@ -41,7 +41,7 @@ body{
    
 }
 .indice-topo{
-    display:  flex;
+    display:flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
@@ -208,7 +208,7 @@ body{
 main{
     height: 35vh;
     width: 100vw;
-    margin: 0 -20px 0px -20px;
+    
     padding: 10px;
     padding-bottom: 50%;
     position: relative;
@@ -284,7 +284,7 @@ input{
     .banner-main div {
         max-width: 320px;
         
-        
+    
     }
     .indice-topo{
         width: 300px;
@@ -292,23 +292,22 @@ input{
     .logo-topo h1{
         font-size: 1.5em;
     }
+    body{
+        overflow-x: hidden;
+    }
     .nav-list {
         position: absolute;
-        top:11vh;
+        top:7vh;
         right:0;
-        width: 65vw;
-        height: 50vh;
+        width: 80vw;
+        height: 10vh;
         border-radius: 0px 14px;
-        background-image: url(indice.png);
         background-color: #000000;
-        background-position: center center;
-        background-size: contain;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: space-around;
-        transform: translateX(100%);
         transition: transform 0.3s ease-in;
-        overflow: hidden;
+        
     }
     .nav-list li {
         margin-left:0;
@@ -323,7 +322,7 @@ input{
 
 }
 .nav-list.active{
-    transform: translateX(0);
+    display: none;
 }
 
 @media(max-width:1350px){
@@ -340,9 +339,9 @@ input{
         
     }
     .content{
-            height: 420px;
-            width: 935px;
-            border-radius: 8px;
+        height: 420px;
+        width: 935px;
+        border-radius: 8px;
     }
     .barra-busca>h2{
     
