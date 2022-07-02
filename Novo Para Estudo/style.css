@@ -16,6 +16,7 @@ body{
     width: 100%;
     height: 100%;
     background: black;
+    overflow-x: hidden;
 }
 :root{
     --font-inicial: 'Roboto', sans-serif;
@@ -43,45 +44,58 @@ body{
     display:  flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     height: 80px;
     width: 600px;
     
 }
 
 .indice-topo a{
-    margin-left: 20px;
-    padding: 5px 20px;
-    font-size: 1.4em;
+    margin-left: 15px;
+    padding: 5px 5px;
+    font-size: 1.1em;
     text-decoration: none;
     border-radius: 5px;  
-    color: rgb(114, 67, 254);
-    font-weight: 400;
+    color: rgb(255, 0, 0);
+    font-weight: lighter;
+    
 }
 .indice-topo a:hover{
-    border: 2px solid rgb(121, 121, 202);
     color: aliceblue;
 }
 .logo-topo h1{
     color: rgb(255, 0, 0);
     font-weight: lighter;
+   
 }
-.navega-midia input{
-    border: none;
-    background: transparent;
-    padding: 20px;
-    color: red;
-    font-weight: bolder;
-    font-size: 1.5em;
+.nav-list {
+    list-style: none;
+    display: flex;
 }
+.nav-list li{
+    letter-spacing: 3px;
+    
+}
+.mobile-menu{
+    display: none;
+    cursor: pointer;
+}
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    
+
+}
+
 .banner-main{
     width: 100vw;
-    height: 69vh;
+    height: 70vh;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content:  left;
-    padding: 20px;
+    justify-content: center;
     background-image: url(686126.jpg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -89,22 +103,7 @@ body{
     background-attachment: fixed;
     box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.524) inset; 
     
-}
-.banner-main div {
-    max-width: 600px;
-    min-height: 300px;
-    background-color: rgba(0, 0, 0, 0.652);
-}
-.banner-main div p{
-    color: white;
-    text-align: justify;
-    padding: 10px;
-}
-.banner-h2 h2{
-    font-size: 1.9em;
-    color: aliceblue;
-    padding: 20px;
-    font-family: var(--font-inicial);
+    
 }
 .busca{
     display: flex;
@@ -114,51 +113,45 @@ body{
     height: 120px;
     background-image: url(indice.png);
     background-position: center center;
-
     background-size: contain;
-   
+    
 
    
 }
 .barra-busca{
-    background-image: linear-gradient(to bottom,rgb(114, 67, 254),rgb(64, 54, 93));
-    width: 60%;
-    height: 80px;
-    border-radius: 0px;
-    border: 3px solid rgb(2, 0, 3);
-    box-shadow: 0px 0px 120px 3px rgba(107, 41, 214, 0.785);
-    
+    background: transparent;
+    width: 30%;
+    height: 75px;
+    border-radius: 90px;
+    border: 1px solid rgb(2, 0, 3);
+    box-shadow: 0px 0px 40px 3px rgba(214, 41, 41, 0.424);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.barra-busca {
-    color: aliceblue;
-    font-size: 2.0em;
-    text-align: center;
-    font-family: var(--font-animada2);
+.barra-busca>h2{
     
+    color: rgb(255, 0, 0);
+    font-size: 2.5em;
+    font-family: var(--font-inicial);
+    font-weight: 100;
 }
 .box-tabela{
     height: 100%;
-    width: 100%;
-    
+    width: 100%;  
     background-image: url(imgbcg2.jpg);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    
-
-
-}
-.box-tabela{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-gap: 5px;
     justify-items: center;
-    align-items: center;   
-    border-radius: 6px;
-    
-    
+    align-items: center; 
+
+
 }
 .produtos{
     background: rgb(0, 0, 0);
@@ -176,10 +169,6 @@ body{
 .bt-comprar{
     padding: 10px 10px ;
     background: rgb(0, 128, 255);
-    
-    
-
-
 }
 .bt-comprar a{
     text-decoration: none;
@@ -194,18 +183,99 @@ body{
 .bt-comprar:hover a{
     color:black; 
 }
-img{
+.produtos>img{
     width: 80%;
     padding: 10px;
 }
-.navega-midia img{
-    width:20%;
+
+.mobile-menu{
+    display: none;
+    cursor: pointer;
 }
-.navega-midia{
+.mobile-menu .line1{
+    transform: rotate(-45deg) translate(-8px,8px);
+    transition: 0.3;
+}
+.mobile-menu .line2{
+    opacity: 0;
+}
+.mobile-menu .line3{
+    transform: rotate(45deg) translate(-5px,-7px);
+    transition: 0.3;
+}
+main{
+    height: 35vh;
+    width: 100vw;
+    margin: 0 -20px 0px -20px;
+    padding: 10px;
+    padding-bottom: 50%;
+    position: relative;
+    background-image: linear-gradient(to left, #23232e,#2e0c2f);
+}
+.content{
+    height: 620px;
+    width:1135px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%); 
+    box-shadow: 0px 0px 80px 5px rgba(255, 255, 255, 0.309);
+    border: 1px solid black;
+    
+}
+.nav-label{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%);
+    display: flex;
+}
+.bar{
+    width: 70px;
+    height: 17px;
+    border: 2px solid #fff;
+    margin: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.bar:hover{
+    background: #fff;
+}
+input{
     display: none;
 }
-.active{
+.slides{
+    display: flex;
+    width: 500%;
+    height: 100%;
+    
+}
+.slide{
+    width: 20%;
+    transition: .6s;
+}
+.slide img{
+    width: 100%;
+    height: 100%;
 
+}
+#slide1:checked ~  .s1{
+    margin-left: 0% ;
+}
+#slide2:checked  ~ .s1{
+    margin-left: -20% ;
+}
+#slide3:checked ~.s1{
+    margin-left: -40%;
+}
+#slide4:checked ~.s1{
+    margin-left: -60%;
+}
+#slide5:checked ~.s1{
+    margin-left: -80%;
 }
 
 @media (max-width:790px){
@@ -214,28 +284,45 @@ img{
         
         
     }
-    .navega-topo{
-        display: none;
-    }
-    .navega-midia{
-        display: block;
-        
-    }
-    .barra-busca {
-        font-size: 1.3em;
-        text-align: center;
-        padding: 10px;
-        
-    }
     .indice-topo{
         width: 300px;
     }
     .logo-topo h1{
         font-size: 1.5em;
     }
-   
+    .nav-list {
+        position: absolute;
+        top:12vh;
+        right:0;
+        width: 65vw;
+        height: 50vh;
+        border-radius: 0px 14px;
+        background-image: url(indice.png);
+        background-color: #000000;
+        background-position: center center;
+        background-size: contain;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+        margin-left:0;
+        
+        
+    }
+   .mobile-menu{
+        display: block;
+        
+    }
+    
 
 }
+.nav-list.active{
+    transform: translateX(0);
+}
+
 @media(max-width:1350px){
     .box-tabela{
         grid-template-columns: 1fr 1fr 1fr ;
@@ -247,8 +334,20 @@ img{
     .box-tabela{
         height: 100%;
         width: 100%;
+        
     }
+    .content{
+            height: 420px;
+            width: 935px;
+            border-radius: 8px;
+    }
+    .barra-busca>h2{
     
+        color: rgb(255, 0, 0);
+        font-size: 2.0em;
+        font-family: var(--font-inicial);
+        font-weight: 100;
+    }
 }
 @media(max-width:1020px){
     .box-tabela{
@@ -260,6 +359,27 @@ img{
     .box-tabela{
         height: 100%;
         width: 100%;
+    }
+    .content{
+        height: 260px;
+        width: 600px;
+        border-radius: 8px;
+    }
+    .bar{
+        width: 40px;
+        height: 17px;
+        
+    }
+    .barra-busca>h2{
+    
+        color: rgb(255, 0, 0);
+        font-size: 1.5em;
+        font-family: var(--font-inicial);
+        font-weight: 100;
+        
+    }
+    .barra-busca{
+        height: 65px;
     }
 }
 @media(max-width:670px ){
@@ -273,11 +393,41 @@ img{
         height: 100%;
         width: 100%;
     }
+    .content{
+        height: 180px;
+        width: 290px;
+        margin-left: 10px;
+        border-radius: 8px;
+    }
+    .bar{
+        width: 18px;
+        height: 17px;
+        border: 2px solid #fff;
+        margin: 3px;
+        border-radius: 9px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .barra-busca>h2{
     
+        color: rgb(255, 0, 0);
+        font-size: 1.2em;
+        font-family: var(--font-inicial);
+        font-weight: 100;
+    }
 }
 @media(max-width:568px){
     .box-tabela{
         height: 100%;
         width: 100%;
+    }
+    .barra-busca {
+        height: 45px;
+        width: 55%;
+        
+        
+    }
+    .busca{
+        height: 65px;
     }
 }

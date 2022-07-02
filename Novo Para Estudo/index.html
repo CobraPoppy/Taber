@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja Eternity</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body>
 
@@ -15,30 +17,64 @@
             <div class="logo-topo">
                 <h1>Rede <strong>Eternity</strong>  </h1>
             </div>
-            <nav class="navega-topo">
-                <a href="#loja-server">Loja</a>
-                <a href="#">Contato</a>
-                <a href="index1.html">Login</a>
+            <nav >
+                <ul class="nav-list" id="navga" >
+                    <li ><a href="#loja-server" id="Fechar" onclick="Clicar()">Loja</a></li>
+                    <li ><a href="#">Contato</a></li>
+                    <li ><a href="index1.html">Login</a></li>
+                </ul>
             </nav>
-            <div class="navega-midia">
-                <input type="button" value="| |" id="btn-mobile" onclick="ALA()">
+            <div class="mobile-menu" id="btn-mobile" onclick="ALA()">
+               <div class="line1"  id="l1"></div>
+               <div class="line2"  id="l2"></div>
+               <div class="line3"  id="l3"></div>
             </div>
         </div>
     </header>
-
-
+    
     <article class="banner-main">
-        <div class="banner-h2">
-            <h2>Melhor Server da America Latina</h2>
-            <p>Diacordo com o formbs temos a melhor infaestrutura de servers de minecraft do america latina confira <a href="http://" target="_blank" rel="noopener">aqui</a>.</p>
-        </div>
+        
         
     </article>
-    <aside class="busca">
-       
-            <h2 class="barra-busca" id="loja-server">Loja do Server</h2>
+
+    <main>
         
+        <div class="content">
+            <div class="slides">
+                <input type="radio" name="slide" id="slide1" placeholder="aa" chacked>
+                <input type="radio" name="slide" id="slide2" placeholder="aa">
+                <input type="radio" name="slide" id="slide3" placeholder="aa">
+                <input type="radio" name="slide" id="slide4" placeholder="aa">
+                <input type="radio" name="slide" id="slide5" placeholder="aa">
+                
+                
+                <div class="slide s1"><img src="Imgs/slide (1).jpg" alt=""></div>
+                <div class="slide"><img src="Imgs/slide (2).jpg" alt=""></div>
+                <div class="slide"><img src="Imgs/slide (3).jpg" alt=""></div>
+                <div class="slide"><img src="Imgs/slide (4).png" alt=""></div>
+                <div class="slide"><img src="Imgs/slide (5).png" alt=""></div>
+                
+            </div>
+        
+            <div class="nav-label">
+                <label for="slide1" class="bar"></label>
+                <label for="slide2" class="bar"></label>
+                <label for="slide3" class="bar"></label>
+                <label for="slide4" class="bar"></label>
+                <label for="slide5" class="bar"></label>
+            </div>
+        </div>
+
+    </main>
+
+
+    <aside class="busca">
+        <div class="barra-busca">
+            <h2  id="loja-server">Loja do Server</h2>
+        </div>
     </aside>
+
+
     <section class="box-tabela" id="boxdatabela">
     
         <div class="produtos">
@@ -203,15 +239,10 @@
 
        
     </section>
-    <script>
-        let borom = window.document.getElementById('btn-mobile')
-        let LML = window.document.getElementById('navega-topo')
-        function ALA() {
-            if(LML.classList.contains("active")){
-                LML.classList.remove('active')
-            }else{LML.classList.add('active')}
-        }
-    </script>
+    <script src="mobile-nav-bar.js"></script>
+    <script src="mobile-animation.js"></script>
+        
+    
     
 </body>
 
