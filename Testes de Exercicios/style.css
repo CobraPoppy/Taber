@@ -1,13 +1,15 @@
 *{
-    margin: auto;
-    padding: auto;
+    padding: 0;
     box-sizing: border-box;
+    color: white;
+    
 }
+
 header{
     width: 100%;
     height: 80px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     padding: 20px;
     background:rgb(103, 114, 160);
@@ -24,65 +26,125 @@ nav ul li{
 header div h1{
     font-weight: lighter;
     font-family: Georgia, 'Times New Roman', Times, serif;
-}
-main{
-    height: 65vh;
-    width: 100vw;
-    border-bottom: 2px solid black;
-    display: flex;
-    align-content: center;
-    flex-wrap: wrap;
-    
-}
-main>h2{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 2.2em;
-    padding: 10px;
-    text-align: center;
-
-
-}
-main>p{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+} 
+.contain{
     font-size: 1.2em;
-    padding: 10px;
     text-align: center;
-    
+    background: rgb(177, 174, 174);
+    height: 200vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 2fr 2fr 2fr 1fr;
+    grid-gap: 5px;
+    grid-template-areas: 
+        "top-bar top-bar top-bar top-bar"
+        "left-bar main-bar main-bar right-bar"
+        "left-bar main-bar main-bar right-bar"
+        "bottom-bar bottom-bar bottom-bar bottom-bar"
+    ;
 }
-main>img{
-    height: 45%;
+
+.top-bar{
+    background: #23232e;
+    grid-area: top-bar;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr ;
     padding: 10px;
+    grid-gap: 10px;
    
 }
-section{
-    height: 10vh;
-    width: 100%;
-    background: black;
-    display: flex;
-    align-content: center;
+.d1{
+    background: rgb(181, 139, 139);
 }
-section>a input{
-    padding: 15px 40px;
-    border-radius: 100px;
-    font-size: larger;
-    font-weight: bolder;
-}
-section>a input:hover{
-    background: black;
-    color: white;
-    transition: ease 0.4s;
-
-}
-
-
-
-
-
-
-
-
-
-
-@media (max-width:1380px){
+.d2{
+    background: rgb(167, 136, 136);
     
+}
+.left-bar{
+    background: #23232e;
+    padding: 15px;
+    
+    grid-area: left-bar;
+}
+.right-bar{
+    background: #23232e;
+    padding: 15px;
+    
+    grid-area: right-bar;
+}
+.main-bar{
+    
+
+    background: #23232e;
+    
+    grid-area: main-bar;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+
+}
+.box-img-main{
+    margin: 10px;
+    border: 2px solid ;
+    border-radius: 8px;
+    background-image: url(620-6209250_noragami-hiyori-png-transparent-png.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center ;
+    background-attachment: fixed;
+    width: 60vw;
+    height: 65vh;
+}
+
+.main-bar p {
+    
+    
+}
+.bottom-bar{
+    background: #23232e;
+   
+    grid-area: bottom-bar;
+}
+
+
+
+@media (max-width:1024px){
+    .contain{
+        height: 250vh;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 4fr 1fr 1fr;
+        grid-gap: 5px;
+        grid-template-areas: 
+        "top-bar top-bar "
+        " main-bar main-bar"
+        "right-bar left-bar"
+        "bottom-bar bottom-bar "
+    ;
+    }
+    
+}
+@media (max-width:800px){
+    .contain{
+        height: 280vh;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 2fr 3fr 1fr 1fr 0.5fr ;
+        grid-gap: 5px;
+        grid-template-areas: 
+            "top-bar "
+            "main-bar"
+            "left-bar"
+            "right-bar"
+            "bottom-bar "
+        ;
+    }
+    .top-bar{
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr;
+        padding: 10px;
+        grid-gap: 10px;
+       
+    }
 }
