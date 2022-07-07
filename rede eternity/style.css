@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: var(--font-inicial);
+
+
+}
+:root{
+    --font-inicial: 'Roboto', sans-serif;
+    --font-inicial2:  'Share Tech Mono', monospace;
+    --font-inicial3: 'Nova Mono', monospace;
+    --font-inicial4: 'Major Mono Display', monospace;
+    --font-inicial5: 'Jura', sans-serif;
+}
+
+
+header{
+    height: 15vh;
+    background: rgb(21, 21, 21);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+header>h1{
+    color: white;
+}
+.Site{
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 0.5fr;
+    grid-gap: 10px;
+    grid-template-areas:
+        "banner banner"
+        "news news"
+        "loja loja"
+        "main main"
+        "contato contato"
+    ; 
+    height: 300vh;
+    
+}
+.main{
+    grid-area: main;
+}
+.loja{
+    background-color: cadetblue;
+    grid-area: loja;
+    background: rgb(146, 164, 141);
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr;
+    grid-gap: 5px;
+    justify-items: center;
+    align-items: center; 
+    
+}
+.news{
+    grid-area: news;
+}
+.nav-menu>a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    font-size: 1.3em;
+}
+
+
+.banner{
+    display: grid;
+    grid-template-columns: 1fr  ;
+    grid-template-rows: 1fr ;
+    grid-gap: 5px;
+    background-image: url(686126.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 120px 10px black inset;
+    grid-area: banner;
+    
+
+}
+.banner-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.contain-banner{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+    
+
+}
+.contain-banner h1{
+    font-size: 3.5em;
+    font-family:var(--font-inicial5);
+    font-weight: bold;
+    padding: 10px 30px;
+    background: rgba(255, 255, 255, 0.846);
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    
+
+}
+.contain-banner strong{
+    font-family: var(--font-inicial5);
+    color: blueviolet;
+}
+.contato{
+    background: brown;
+    grid-area: contato;
+}
+
+.produtos{
+    background: rgba(0, 0, 0, 0.644);
+    width: 250px;
+    height: 330px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 8px;
+    border: 5px solid  rgb(45, 45, 87);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.148);
+}
+.produtos h3{
+    font-size: 1.3em;
+    color: white;
+    padding: 20px;
+    
+}
+.produtos>img{
+    width: 78%;
+    padding: 5px;
+    border: 2px solid whitesmoke;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+.bt-comprar a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bolder;
+    padding: 20px 35px;
+    border-radius: 5px;
+    background-color: rgb(45, 45, 87);
+}
+.box-tabela{
+      
+    background-image: url(imgbcg2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+    justify-items: center;
+    align-items: center; 
+    width: 63vw;
+    height:100vh;
+    overflow-y: hidden;
+    overflow-y: scroll;
+    border-radius: 10px;
+    border: 5px solid ;
+    
+    
+
+}
+.box-tabela::-webkit-scrollbar{
+    background: black;
+    border-radius: 3px;
+    
+}
+.box-tabela::-webkit-scrollbar-thumb{
+    background-color: aqua;
+    border-radius: 10px;
+}
