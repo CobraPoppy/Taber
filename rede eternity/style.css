@@ -109,7 +109,7 @@ header>h1{
 
 }
 .contain-banner h1{
-    font-size: 3.5em;
+    font-size: 3rem;
     font-family:var(--font-inicial5);
     font-weight: bold;
     padding: 10px 30px;
@@ -191,4 +191,67 @@ header>h1{
 .box-tabela::-webkit-scrollbar-thumb{
     background-color: aqua;
     border-radius: 10px;
+}
+@media (max-width:1420px){
+    .box-tabela{
+        grid-template-columns: 1fr 1fr  ;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+}
+@media (max-width:1024px){
+    .contain-banner h1{
+        font-size: 2rem;
+    }
+    .box-tabela{
+        grid-template-columns:  1fr 1fr 1fr;
+        grid-template-rows: 1fr ;
+        width: 100vw;
+        height:100vh;
+        overflow-y: hidden;
+        overflow-y: scroll;
+    }
+    .loja{
+        
+        grid-template-columns: 1fr  ;
+        grid-template-rows: 1fr;
+        grid-gap: 5px;
+    }
+}
+@media (max-width:899px){
+    .contain-banner h1{
+        font-size: 2rem;
+    }
+    .box-tabela{
+        grid-template-columns:  1fr 1fr ;
+        grid-template-rows: 1fr ;
+        width: 100vw;
+        height:100vh;
+        overflow-y: hidden;
+        overflow-y: scroll;
+    }
+    .loja{
+        
+        grid-template-columns: 1fr  ;
+        grid-template-rows: 1fr;
+        grid-gap: 5px;
+    }
+}
+@media (max-width:600px){
+    .contain-banner h1{
+        font-size: 2rem;
+    }
+    .box-tabela{
+        grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr ;
+        width: 100vw;
+        height:65vh;
+        overflow-y: hidden;
+        
+    }
+    .loja{
+        
+        grid-template-columns: 1fr  ;
+        grid-template-rows: 1fr;
+        grid-gap: 5px;
+    }
 }
