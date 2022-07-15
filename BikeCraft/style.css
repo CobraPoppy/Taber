@@ -1,0 +1,135 @@
+*{
+    margin: auto;
+    padding: 0;
+    font-family: Arial;
+    text-decoration: none;
+
+}
+body{
+    display: grid;
+    gap: 60px;
+    justify-items: center;
+    margin-top: 60px;
+    
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+a{
+    text-decoration: none;
+
+}
+p,h1,h2,h3{
+    margin: 0;
+}
+p{
+    font-size: 20px;
+    line-height: 1.3;
+}
+:root{
+    --color-inicial1: #f7f7f7;
+    --color-cz-escuro: #c6c6c6;
+    --color-red-buff: #ee2211;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+    text-align: center;
+    
+
+}
+.titulo {
+    height: 180px;
+    width: 100%;
+    
+    
+    
+}
+.titulo h1{
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.9em;
+}
+nav a{
+    
+    margin-left: 20px ;
+    padding: 15px 30px;
+    font-size: 1em;
+    color: black;
+    font-weight: bold;
+    background-color: var(--color-inicial1);
+    border-radius: 4px;
+}
+nav{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    
+    
+}
+.conteudo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    justify-content: right;
+    align-items: center;
+
+}
+.conteudo img{
+    border-radius: 4px;
+    
+}
+.detalhe{
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-red-buff);
+    position: absolute;
+    top:30px;
+    right: -30px;
+}
+.botão{
+    background-color: var(--color-red-buff);
+    padding: 15px 30px;
+    border-radius: 4px;
+    color: white;
+
+}
+
+.box-text-l{
+    background: var(--color-inicial1);
+    text-align: right;
+    padding: 40px;    
+    position: relative;
+    display: grid;
+    align-content: center;
+    gap: 20px;
+    justify-items: end;
+}
+.subititulo{
+    font-size: 5em;
+    text-align: right;
+    color: var(--color-cz-escuro);
+    
+}
+.vantagens-item{
+    padding: 20px;
+    box-shadow: 4px 4px 10px 0px var(--color-cz-escuro) ;
+    margin-bottom: 20px;
+    background-color: var(--color-inicial1);
+
+}
+.vantagens-item h3{
+    margin-bottom: 20px;
+    
+    
+}
+footer p{
+    background-color: var(--color-inicial1);
+    font-size: 0.8em;
+
+}
