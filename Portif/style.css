@@ -62,21 +62,29 @@ nav a{
     
 }
 .conteudo h2{
-    font-size: 8em;
+    font-size: 7em;
+    text-align: left;
+    padding: 30px;
 }
 .titulo{
     font-size: 4em;
 }
+
 .rezolverh2 h2{
     font-size: 1.5em;
-    color: rgb(136, 67, 10);
+    color: rgb(255, 221, 25);
 }
 .dados{
     background: rgb(81, 153, 147);
-    padding: 10px 10px;
-    margin: 10px;
+    padding: 1px 10px;
+    margin: 25px;
+    height: 160px;
+    width: 80%;
+    box-shadow: -5px -5px 0px white;
+    
     
 }
+
 .dados:hover{
     background:rgba(5, 161, 161, 0.801) ;
 }
@@ -93,7 +101,7 @@ nav a{
     padding: 10px;
     margin: 10px;
     background: black;
-    color: rgb(255, 175, 27);
+    color: rgb(255, 210, 128);
 
 }
 .contatos {
@@ -106,10 +114,12 @@ nav a{
 .contatos:hover{
     background: rgba(0, 0, 0, 0.781);
 }
-.titulo2{
+h2.titulo2{
     color: white;
     translate: 0.5s ease ;
+    font-size: em;
 }
+
 .il1{
     background-image: url(Loja.\ pnfg.png);
     background-position: center center;
@@ -139,6 +149,12 @@ nav a{
     .conteudo{
         grid-template-columns: 1fr ;
         grid-template-rows: 1fr 1fr 1fr;
+    }
+    .titulo{
+        font-size: 3em;
+    }
+    .titulo2{
+        font-size:3em;
     }
 }
 @media (max-width:591px){
