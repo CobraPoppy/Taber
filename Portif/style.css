@@ -96,7 +96,7 @@ nav a{
     color: rgb(255, 221, 25);
 }
 .dados{
-    background-image: linear-gradient(to top, #000000, #200933);
+    background-image: linear-gradient(to top, #0b0511 , #200933 90% );
     padding: 5px;   
     margin: 20px;
     height: 140px;
@@ -144,16 +144,19 @@ nav a{
 .contatos a{
     padding: 10px;
     margin: 10px;
-    background: black;
+    background: rgb(187, 31, 20);
     color: rgb(255, 210, 128);
+    border-radius: 10px 10px;
 
 }
 .contatos {
     padding: 10px;
     margin: 30px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     width: 300px;
     height: 200px;
+    border-radius: 20px;
+
 }
 .contatos:hover{
     width: 350px;
@@ -174,13 +177,13 @@ h2.titulo2{
 .titulo2{
     display: flex;
     align-items: center;
-    text-shadow: 5px 5px beige;
+    text-shadow: 5px 2px beige;
 }
 #form{
-    font-family: var(--font1);
-    font-weight: 500;
-    text-shadow: 2px 2px beige;
-    font-size: 3.5em;
+    
+    font-weight: 800;
+    text-shadow: 5px 2px beige;
+    font-size: 3em;
 }
 
 .il1{
@@ -200,6 +203,7 @@ h2.titulo2{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
+    
 }
 .il4{
     background-image: url(Rede\ Eternity\ pdfg.png);
@@ -271,6 +275,7 @@ h2.titulo2{
     text-align: center;
     padding: 20px;
     font-size: 2.4em;
+    text-shadow: 5px 2px beige;
 
 }
 
@@ -299,7 +304,7 @@ footer p{
     font-family: var(--font-port);
     
 }
-.prol p.x{
+.prol .x{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1.6em;
 }
@@ -345,6 +350,8 @@ footer p{
     }
     .prol p{
         text-align: center;
+        font-size: 1.0em;
+        padding: 15px;
     }
     .imghabi{
         
@@ -372,6 +379,9 @@ footer p{
         width: 300px;
         padding: 0;
         margin: 0;
+    }
+    .prol>p{
+        font-size: 1.3;
     }
 
 }
