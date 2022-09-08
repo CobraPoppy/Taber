@@ -26,8 +26,7 @@ img{
 }
 .ass{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    
 }
 header{
     width: 100%;
@@ -66,8 +65,13 @@ nav a{
     text-align: left;
     padding: 30px;
 }
+.conteudo img{
+    margin-left: 50px;
+}
 .titulo{
     font-size: 4em;
+    
+    
 }
 
 .rezolverh2 h2{
@@ -76,13 +80,17 @@ nav a{
 }
 .dados{
     background: rgb(81, 153, 147);
-    padding: 1px 10px;
-    margin: 25px;
-    height: 160px;
-    width: 80%;
-    box-shadow: -5px -5px 0px white;
+    padding: 5px;   
+    margin: 20px;
+    height: 140px;
+    width: 70%;
+    border-radius: 10px 0px;
+    border: solid 2px black
     
     
+}
+.dados h2{
+    padding: 0%;
 }
 
 .dados:hover{
@@ -91,6 +99,7 @@ nav a{
 .Fotter{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .titulon1{
     padding: 10px;
@@ -118,6 +127,15 @@ h2.titulo2{
     color: white;
     translate: 0.5s ease ;
     font-size: em;
+}
+.box-xps{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.titulo2{
+    display: flex;
+    align-items: center;
 }
 
 .il1{
@@ -152,9 +170,11 @@ h2.titulo2{
     }
     .titulo{
         font-size: 3em;
+        margin: 40px ;
     }
     .titulo2{
         font-size:3em;
+        margin: 40px;
     }
 }
 @media (max-width:591px){
