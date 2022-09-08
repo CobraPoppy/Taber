@@ -1,15 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=KoHo:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,400&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: var(--font1);
+    text-decoration: none;
 }
 body{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-image: linear-gradient(to left, #a74949, #d19d0c);
 }
 
 a{
@@ -22,6 +26,8 @@ img{
 }
 :root{
     --font1: 'Fira Sans', sans-serif;
+    --font-inicial: 'Roboto', sans-serif;
+    --font-port: 'KoHo', sans-serif;
 
 }
 .ass{
@@ -34,7 +40,7 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #24ccff;
+    background-image: linear-gradient(to left, #a74949, #d19d0c);
     
 }
 nav a{
@@ -55,46 +61,73 @@ nav a{
     grid-template-columns: 1fr 1fr ;
     grid-template-rows: 1fr 1fr 1fr;
     align-items: center;
-    background-color: rgba(0, 255, 255, 0.801);
+    background-image: linear-gradient(to left, #a74949, #d19d0c);
     justify-content: center;
     max-width: 1000px;
+   
+    
     
 }
 .conteudo h2{
     font-size: 7em;
     text-align: left;
     padding: 30px;
+    
 }
-.conteudo img{
-    margin-left: 50px;
+.oriimg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .titulo{
-    font-size: 4em;
+    font-size: 3em;
+    text-shadow: -5px 2px rgb(255, 245, 231);
+    
+    text-align: justify;
     
     
 }
-
+.ass nav a{
+    font-family: var(--font-inicial);
+    font-weight: bold;
+}
 .rezolverh2 h2{
     font-size: 1.5em;
     color: rgb(255, 221, 25);
 }
 .dados{
-    background: rgb(81, 153, 147);
+    background-image: linear-gradient(to top, #000000, #200933);
     padding: 5px;   
     margin: 20px;
     height: 140px;
-    width: 70%;
-    border-radius: 10px 0px;
-    border: solid 2px black
+    width: 300px;
+    border-radius: 10px 10px;
+    
+    
     
     
 }
 .dados h2{
-    padding: 0%;
+    padding: 10px;
+    text-align: center;
+}
+.dados h3{
+    padding: 5px;
+    text-align: end;
+    font-size: 1em;
+    color: rgb(206, 113, 84);
+}
+.dados p{
+    padding-left: 15px;
+    color: white;
+
 }
 
 .dados:hover{
-    background:rgba(5, 161, 161, 0.801) ;
+    background:rgba(255, 0, 0, 0.801) ;
+    height: 120px;
+    width: 250px;
+    transition: 0.5s ease;
 }
 .Fotter{
     display: flex;
@@ -105,6 +138,7 @@ nav a{
     padding: 10px;
     font-size: 5em;
     text-align: center;
+    font-family: var(--font1);
 }
 .contatos a{
     padding: 10px;
@@ -121,12 +155,15 @@ nav a{
     height: 200px;
 }
 .contatos:hover{
-    background: rgba(0, 0, 0, 0.781);
+    width: 350px;
+    height: 250px;
+    transition: 0.6s ease;
 }
 h2.titulo2{
-    color: white;
+    color: rgb(0, 0, 0);
     translate: 0.5s ease ;
-    font-size: em;
+    margin: 40px
+    
 }
 .box-xps{
     align-items: center;
@@ -136,6 +173,13 @@ h2.titulo2{
 .titulo2{
     display: flex;
     align-items: center;
+    text-shadow: 5px 5px beige;
+}
+#form{
+    font-family: var(--font1);
+    font-weight: 500;
+    text-shadow: 2px 2px beige;
+    font-size: 3.5em;
 }
 
 .il1{
@@ -163,6 +207,76 @@ h2.titulo2{
     background-size: contain;
     
 }
+.barra{
+    background-color: #000000;
+    position: absolute;
+    width: 5px;
+    height: 100vh;
+    
+    left: 50%;
+    top: 50%;
+    transform: translate(50%,85%);
+
+}
+.redes{
+    padding: 20px;
+    margin: 40px;
+}
+.final{
+    
+    margin: 5px;
+    width: 100%;
+    
+}
+.final>img{
+    width: 6%;
+    padding: 0;
+    margin: 0;
+    
+}
+.final {
+    padding: 10px;
+    text-align: left;
+
+}
+.final a{
+    font-size: 1.7em;
+    font-family: var(--font-inicial);
+    font-weight: bolder;
+    font-style: italic;
+    text-align: left;
+    
+}
+.redes h2{
+    font-size: 4em;
+    text-align: center;
+    font-family: var(--font1);
+    font-weight: 500;
+    text-shadow: -2px 2px wheat;
+}
+footer{
+    height: 35px;
+    width: 100%;
+    color: wheat;
+    background-color: #200933;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8em;
+}
+.prol p{
+    padding-top: 20px;
+    font-size: 1.2em;
+    color:#200933;
+    font-weight: bold;
+    font-family: var(--font-port);
+    text-shadow: -1px 1px whitesmoke;
+}
+#Experi2{
+    display: none;
+}
+.imghabi{
+    display: none;
+}
 @media (max-width:875px){
     .conteudo{
         grid-template-columns: 1fr ;
@@ -173,8 +287,36 @@ h2.titulo2{
         margin: 40px ;
     }
     .titulo2{
-        font-size:3em;
+        font-size: 3em;
         margin: 40px;
+        text-shadow: 5px 5px beige;
+    }
+    .barra{
+        display: none;
+    }
+    #Experi{
+        font-size: 4em;
+        text-align: center;
+        display: none;
+    }
+    #Experi2{
+        display: block;
+        font-size: 3em;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .titulo{
+        text-align: center;
+        padding: 0;
+    }
+    .prol p{
+        text-align: center;
+    }
+    .imghabi{
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 @media (max-width:591px){
