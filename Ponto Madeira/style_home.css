@@ -17,62 +17,52 @@
 }
 body{
     background-color: var(--color_backgrownd_OD);
-    width: 100vw;
-    height: 2185px;
+    width: 100%;
+    height:  277vh;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     background-image: url(imgs/Back\ grasund\ definitivo\ Real.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
 
 }
 header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 70px;
+    
+    margin-bottom: 20px;
+    
 
 }
-nav ul{
-    
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-ul li{
-    padding-left: 120px;
-    
-}
-ul li a{
-    text-decoration: none;
-    color: white;
-    font-size: 10pt;
-}
-nav{
+
+
+
+.barraNav{
     background: var(--color_barras);
     border-radius: 6px;
-    width: 1198px;
-    height: 71px;
+    width: 83vw;
+    height: 8.9vh;
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
+
+    
     
 }
-.img_svg1{
-    padding-left: 70px;
-    
+.barraNav a{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 8pt;
 }
-.img_svg2{
-    padding-left: 20px;
-}
-.titulo1{
-    padding-left: 0;
-    
-}
+
 main{
     background-color: var(--color_backgrownd);
-    height: 1853px;
-    width: 1198px;
+    height: 234vh;
+    width: 83vw;
     border-radius: 6px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
@@ -89,25 +79,26 @@ main{
 }
 .banner{
     grid-area: banner;
-    background-color: #4b3838;
-    height: 505px;
-    width:1198px ;
-    background-image: url(imgs/Camada\ 2.png);
+    background-color: #7e7e7e;
+    height: 500px;
+    
+   
     background-size: cover;
 }
 .categorias{
     grid-area: categorias;
     background-color: #74a885;
-    height: 350px;
+    height: 450px;
 }
 .produtos{
     grid-area: produtos;
     background-color: #1d5380;
     height: 523px;
     background-image: url(imgs/bACK\ FINALE.png);
-    background-position: center ;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 .img_divisor{
     height: 23px;
@@ -116,32 +107,54 @@ main{
 }
 .visita{
     grid-area: visita;
-    background-color: #5e3666;
+    background-color: #ffffff;
     height:442px;
-    background-image: url(imgs/91579.png);
+    background-image: url(imgs/91579\ inver.png);
+    background-position: bottom center;
     background-size: cover;
-    background-position: ;
+    
+    
     
 }
 .carrossel{
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 10px;
     padding: 10px;
     align-items: center;
     justify-content: center;
 }
-.carrossel>h3{
+.categorias>h3{
     position: absolute;
+    
+    
 }
 .categ{
-    height: 222px ;
-    width: 222px;
+    height: 28vh;
+    width: 15vw;
     background-color: #0D0D0D;
     border-radius: 6px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
 }
 .categ>h3{
-    display: flex;
-    justify-content: ;
-    align-items: center;
+    padding: 20px;
+    font-size: 10pt;
+
+    
+    
+    
+}
+@media (max-width:1042px){
+    .categ>h3{
+        
+        font-size: 8pt;  
+        border-radius: 6px;
+        padding: 10px 30px;
+        
+    }
+    .categ{
+        
+    }
 }
