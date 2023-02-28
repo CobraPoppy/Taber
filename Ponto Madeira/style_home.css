@@ -118,7 +118,6 @@ main{
     background:var(--color_barras);
     width: 100%;
     height: 30px;
-    
     font-size: 9pt;
     color: white;
     display: flex;
@@ -136,6 +135,71 @@ main{
     background-size: inherit;
     background-position: center center;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+
+}
+.box-prods{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-evenly;
+    gap: 5px; 
+    width: 70%;
+    
+}
+.estrutura{
+    background-image: url(imgs/Rectangle\ 7\ \(1\).png);
+}
+.prods img{
+    width: 90%;
+    padding: 20px;
+   
+    
+}
+.prods{
+    width: 15vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+    
+    
+
+    
+}
+.desc-prods{
+    text-align: left;
+}
+.text2{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: end;
+    font-size: 8pt;
+    
+    
+}
+.text1 h3{
+    padding: 20px;
+    padding-left: 40px;
+}
+.text2 h3{
+    padding-right: 60px;
+    padding-bottom: 10px;
+}
+.text1{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: start;
+    font-size: 8pt;
+    
 }
 
 .visita{
@@ -283,8 +347,37 @@ footer{
     .btnConvite p{
         padding-right: 0;
     }
+    
+    .prods{
+        width: 15vw;
+        height: 20vh;
+
+    }
+   
 
 }
-@media (max-width:1350px){
-    
+@media (max-width:700px){
+    .box-prods{
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr 1fr ;
+       grid-template-rows: 1fr;
+       align-items: center;
+       justify-items: center;
+       overflow-y: hidden;
+       width: 95%;
+       height: 400px;
+      
+    }
+    .prods{
+        width: 35vw;
+
+        
+    }
+    .text1{
+        display: none;
+
+    }
+    .text2{
+        display: none;
+    }
 }
