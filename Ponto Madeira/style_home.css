@@ -29,6 +29,7 @@ header{
     justify-content: space-around;
     flex-direction: row;
     background-image: var(--color_barras);
+    grid-area: header;
 }
 header a{
     text-decoration: none;
@@ -50,43 +51,57 @@ nav a{
 
 }
 .site{
+    background-color: #0D0D0D;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr ;
-    grid-gap: 10px;
+    grid-template-rows: 0.1fr 1fr 0.1fr 0.5fr 0.1fr 0.9fr 0.1fr 1fr;
+    
     grid-template-areas:
+        'header header'
         "banner banner"
+        "subtitle subtitle"
         "categorias categorias"
+        "subtitle2 subtitle2"
         "produtos produtos"
+        "subtitle3 subtitle3"
         "visita visita"
     ; 
     
 }
 .banner{
     grid-area: banner;
-    background-color: #8C4E03;
+    background-color: #F9F4E4;
 }
 .categorias{
     grid-area: categorias;
-    background-color: #8C2703;
+    background-color: #F9F4E4;
 
 }
 .produtos{
     grid-area: produtos;
-    background-color: #591202;
+    background-color: #F9F4E4;
 }
 .visita{
     grid-area: visita;
-    background-color: aquamarine;
+    background-color: #F9F4E4;
 }
 .categorias{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
+    justify-items: center;
     justify-content: space-evenly;
     padding: 5%;
+    gap: 5%;
     
     
 
+}
+.categorias::-webkit-scrollbar{
+    background-color: #0D0D0D;
+}
+.categorias::-webkit-scrollbar-thumb{
+    background-color: #8C2703;
 }
 .categ{
     height: 15rem;
@@ -102,27 +117,98 @@ nav a{
 .banner iframe{
     height: 500px;
     width: 100%;
-    border: solid 1px ;
+    border: solid 4px ;
+    border-color: var(--color_backgrownd_OD);
     
 
 }
 .btns{
-  margin-top: 5rem;
+  margin-top: 1rem;
+  padding: 2rem;
 }
 .btns a{
    text-decoration: none;
    color: white;
-   padding: 1rem;
+   padding: 0.5rem;
    background-color: #0D0D0D;
+   border-radius: 6px;
+}
+.subtitle3{
+    grid-area: subtitle3;
+    display: grid;
+    grid-template-columns: 1fr ;
+    justify-items: center;
+    color: white;
+    align-items: center;
+}
+.subtitle2 h3{
+    color: #8C4E03;
+}
+.subtitle3 h3{
+    color: #8C4E03;
+}
+.subtitle2{
+    grid-area: subtitle2;
+    display: grid;
+    grid-template-columns: 1fr ;
+    justify-items: center;
+    
+    align-items: center;
+}
+.subtitle{
+    grid-area: subtitle;
+    display: grid;
+    grid-template-columns: 1fr ;
+    justify-items: center;
+    
+    align-items: center;
+}
+.subtitle h3{
+    color: #8C4E03;
 }
 .produtos{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
-    justify-content:space-evenly;
+    justify-items:center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 5%;
+    gap: 20px;
+    
+}
+.produtos::-webkit-scrollbar{
+    background-color: #0D0D0D;
+}
+.produtos::-webkit-scrollbar-thumb{
+    background-color: #8C2703;
+}
+.prods {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 18rem;
+    background-color: #ffffff;
+    height: 25rem;
+    border-radius: 6px;
+    border: solid 2px black ;
 }
 .prods img{
-    width: 100%;
+    padding: 5%;
+}.prods p{
+    padding: 5%;
+    text-align: center;
+}
+.compr{
+    background-color: #0D0D0D;
+    width: 200px;
+    height: 40px;
+    border-radius: 6px;
+
+}
+.compr p{
+    color: white;
 }
 .box-prods{
     display: flex;
@@ -141,28 +227,99 @@ nav a{
 
 
 }
+.btnConvite{
+    background: var(--color_barras);
+    height: 65px;
+    width: 220px;
+    border-radius: 6px;
+    border: solid 2px white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    
+}
+.imgSVG img{
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
+}
 .visita img{
-    width: 50%;
+    width: 70%;
 }
-.imgSVG{
-    width: 10%;
-}
-.convite{
+
+.convite p{
     color: white;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.514);
+    font-size: 16pt;
 
 }
+.convite h1{
+    font-size: 25pt;
+    color: white;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.534);
+}
+.btnConvite p {
+    font-size: 10pt;
+    text-shadow: none;
+}
+
 footer{
     height: 100px;
-    padding: 10px;
-   
+    padding-top: 10px;
+    text-align: left;
+    
     background-color: #0D0D0D;
+}footer p{
+    color: white;
+    padding: 5px;
+    font-size: 0.8rem;
+    text-align: justify;
 }
 .navSociais{
     align-items: center;
     justify-content: center;
     background-image: var(--color_barras);
-    border-radius: 6px;
+    width: 100%;
     display: flex;
-    height: 1.5rem;
+    height: 2rem;
 
+}
+.navSociais img{
+    padding-left: 5px;
+}
+@media(max-width: 1040px){
+    .categorias{
+        overflow-x: scroll;
+
+    }
+    .produtos{
+        overflow-x: scroll;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    main{
+        overflow-x: hidden;
+    }
+    .visita{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        background-image: url(imgs/91579\ Mbl.png);
+    }
+    .convite{
+        text-align: center;
+        text-shadow: 3px 3px 3px black;
+    }
+    .btnConvite{
+        height: 65px;
+        width: 280px;
+        text-shadow: none;
+    }
+    .barraNav a{
+        display:none;
+    }
+    .navMobile{
+        display: block;
+    }
 }
