@@ -14,370 +14,155 @@
     margin: 0;
     padding: 0;
     font-family: var(--font_padrão);
-}
-body{
-    background-color: var(--color_backgrownd_OD);
-    width: 100%;
-    height: 277vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background-image: url(imgs/Back\ grasund\ definitivo\ Real.png);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-clip: border-box;
-
-}
-header{
+    box-sizing: border-box;
+    border: 0;
     
-    margin-bottom: 20px;
-    
-
-}
-
-
-
-.barraNav{
-    background: var(--color_barras);
-    border-radius: 6px;
-    width: 83vw;
-    height: 8.9vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-
-    
-    
-}
-.barraNav a{
-    padding: 10px 20px;
-    text-decoration: none;
-    color: white;
-    font-size: 8pt;
 }
 .navMobile{
     display: none;
-    color: white;
 }
+header{
+    background-color:rgb(114, 71, 71);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    background-image: var(--color_barras);
+}
+header a{
+    text-decoration: none;
+    color: white;
 
-main{
-    background-color: var(--color_backgrownd);
-    height: 234vh;
-    width: 83vw;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 40px;
     
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 10pt;
+    
+
+}
+.site{
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    gap: 10px;
+    grid-template-rows: 1fr 1fr 1fr 1fr ;
+    grid-gap: 10px;
     grid-template-areas:
         "banner banner"
-        "titulo1 titulo1"
         "categorias categorias"
         "produtos produtos"
         "visita visita"
-        
     ; 
     
 }
-.titulo1{
-    grid-area: titulo1;
-    height: 42px;
-    background: var(--color_barras);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-
-}
 .banner{
     grid-area: banner;
-    background-color: #7e7e7e;
-    height: 500px;
-    
-   
-    background-size: cover;
+    background-color: #8C4E03;
 }
 .categorias{
     grid-area: categorias;
-    background: var(--font_padrão);
-    height: 450px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr ;
-    justify-items: center;
-    align-items: center;
-    padding: 20px;
-    gap: 10px;
-    
-   
-}
-.linkCateg{
-    background:var(--color_barras);
-    width: 100%;
-    height: 30px;
-    font-size: 9pt;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #8C2703;
 
-    
-    
 }
 .produtos{
     grid-area: produtos;
-    background-color: #1d5380;
-    height: 523px;
-    background-image: url(imgs/bACK-FINALE-2.png);
-    background-size: inherit;
-    background-position: center center;
-    background-repeat: no-repeat;
+    background-color: #591202;
+}
+.visita{
+    grid-area: visita;
+    background-color: aquamarine;
+}
+.categorias{
     display: flex;
-    align-items: baseline;
-    justify-content: space-evenly;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
+    padding: 5%;
+    
+    
 
 }
-.box-prods{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-content: space-evenly;
-    gap: 5px; 
-    width: 70%;
+.categ{
+    height: 15rem;
+    width: 15rem;
     
 }
-.estrutura{
-    background-image: url(imgs/Rectangle\ 7\ \(1\).png);
-}
-.prods img{
-    width: 90%;
-    padding: 20px;
-   
-    
-}
-.prods{
-    width: 15vw;
-    height: 20vh;
+.banner{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
-    
-    
+}
+.banner iframe{
+    height: 500px;
+    width: 100%;
+    border: solid 1px ;
     
 
-    
 }
-.desc-prods{
-    text-align: left;
+.btns{
+  margin-top: 5rem;
 }
-.text2{
-    width: 100%;
-    height: 40px;
+.btns a{
+   text-decoration: none;
+   color: white;
+   padding: 1rem;
+   background-color: #0D0D0D;
+}
+.produtos{
     display: flex;
-    justify-content: end;
-    font-size: 8pt;
-    
-    
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly;
 }
-.text1 h3{
-    padding: 20px;
-    padding-left: 40px;
-}
-.text2 h3{
-    padding-right: 60px;
-    padding-bottom: 10px;
-}
-.text1{
+.prods img{
     width: 100%;
-    height: 20px;
-    display: flex;
-    justify-content: start;
-    font-size: 8pt;
-    
 }
+.box-prods{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
+}
 .visita{
-    grid-area: visita;
-    background-color: #a33a3a;
-    border-radius: 0px 0px 6px 6px;
-    height:442px;
-    background-image: url(imgs/91579\ inver.png);
-    background-position: bottom center;
-    background-size: cover;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-items: center;
+    background-image: url(imgs/91579\ inver.png);
+    background-position: center;
+    background-size: cover;
+
+
+}
+.visita img{
+    width: 50%;
+}
+.imgSVG{
+    width: 10%;
+}
+.convite{
     color: white;
 
-}
-.btnConvite{
-    background: var(--color_barras);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    border-radius: 6px;
-    border: solid 2px  ;
-    margin-top: 10px;
-    
-}
-.btnConvite div {
-    width: 20%;
-    margin-top: 10px;
-}
-.btnConvite p{
-    padding-right: 15px;
-}
-
-.visita img{
-    width: 60%;
-}
-
-
-.categ{
-    height: 28vh;
-    width: 15vw;
-    background-color: #0D0D0D;
-    border-radius: 6px;
-    display: flex;
-    align-items: end;
-    justify-content: center;
-    border: solid 4px #8C2703;
-    
-}
-.categ>h3{
-    padding: 20px;
-    font-size: 10pt;
-
-    
-    
-    
 }
 footer{
+    height: 100px;
+    padding: 10px;
+   
     background-color: #0D0D0D;
-    color: white;
-    width: 100%;
-    height: 150px;
-    display: grid;
-    grid-template-rows: 1rem 1fr ;
-    justify-items: center;
-    align-items: end;
-
-    
-    margin-top: 80px;
-    
 }
 .navSociais{
-    background: var(--color_barras);
-    width: 100%;
-    height: 40px;
-    border-radius: 6px;
-    display: flex;
     align-items: center;
     justify-content: center;
-}
-.navSociais img{
-    padding: 10px;
-}
-@media (max-width:1042px){
-    .categ>h3{
-        
-        font-size: 8pt;  
-        border-radius: 6px;
-        padding: 10px 30px;
-        
-    }
-    .categ{
-        height: 25vh;
-        width: 25vw;
-        
-    }
-    .carrossel{
-        grid-template-columns: 1fr 1fr ;
-        grid-template-rows: 1fr 1fr;
+    background-image: var(--color_barras);
+    border-radius: 6px;
+    display: flex;
+    height: 1.5rem;
 
-    }
-    .barraNav a{
-        display: none;
-    }
-    .navMobile{
-        display: inline;
-    }
-    .mobileNav{
-        
-        color: white;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .linkCateg p{
-        font-size: 7pt;
-        
-    }
-    .visita{
-        grid-template-columns: 1fr ;
-        grid-template-rows: 1fr 1fr;
-    }
-    .visita{
-        background-image: url(imgs/91579\ Mbl.png);
-    }
-    .visita img{
-        width: 30%;
-    }
-    .visita h2{
-        font-size: 13pt;
-    }
-    .visita p{
-        font-size: 8pt;
-    }
-    .btnConvite{
-        padding: 1;
-    }
-    .imgSVG{
-        display: none;
-    }
-    .btnConvite p{
-        padding-right: 0;
-    }
-    
-    .prods{
-        width: 15vw;
-        height: 20vh;
-
-    }
-   
-
-}
-@media (max-width:700px){
-    .box-prods{
-       display: grid;
-       grid-template-columns: 1fr 1fr 1fr 1fr ;
-       grid-template-rows: 1fr;
-       align-items: center;
-       justify-items: center;
-       overflow-y: hidden;
-       width: 95%;
-       height: 400px;
-      
-    }
-    .prods{
-        width: 35vw;
-
-        
-    }
-    .text1{
-        display: none;
-
-    }
-    .text2{
-        display: none;
-    }
 }
