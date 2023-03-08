@@ -54,7 +54,7 @@ nav a{
     background-color: #0D0D0D;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.1fr 1fr 0.1fr 0.5fr 0.1fr 0.9fr 0.1fr 1fr;
+    grid-template-rows: 0.1fr 0.8fr 0.1fr 0.7fr 0.1fr 1fr 0.1fr 1fr;
     
     grid-template-areas:
         'header header'
@@ -78,6 +78,7 @@ nav a{
     background-color: #F9F4E4;
 
 
+
 }
 .produtos{
     grid-area: produtos;
@@ -90,13 +91,17 @@ nav a{
 }
 .categorias{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr  ;
+    
     align-items: center;
     justify-items: center;
-    justify-content: space-evenly;
+    
     padding: 5%;
-    gap: 5%;
+    gap: 20px;
     box-shadow: 0px 0px 10px 1px inset black;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    
     
     
 
@@ -120,16 +125,45 @@ nav a{
     background-color: #0D0D0D;
 }
 .banner iframe{
-    height: 500px;
+    height: 200px;
     width: 100%;
     border: solid 4px ;
     border-color: var(--color_backgrownd_OD);
     
 
 }
+.categorias_2{
+    background-color: #0D0D0D;
+    width: 100%;
+    height: 180px;
+    margin: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    overflow-y: hidden;
+    padding: 10px;
+       
+
+}
+
+.categ_inicio{
+    background-color: #ffffff;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.categ_inicio p{
+    
+}
 .btns{
-  margin-top: 1rem;
-  padding: 2rem;
+  padding: 1rem;
 }
 .btns a{
    text-decoration: none;
@@ -167,16 +201,19 @@ nav a{
     justify-items: center;
     
     align-items: center;
+    background-color: #8C2703;
 }
 .subtitle h3{
-    color: #8C4E03;
+    color: white;
+    font-size: 18pt;
 }
 .produtos{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr ;
     align-items: center;
     justify-items:center;
-    overflow-x: hidden;
+    overflow-x: scroll;
     overflow-y: hidden;
     padding: 5%;
     gap: 20px;
@@ -188,16 +225,19 @@ nav a{
 .produtos::-webkit-scrollbar-thumb{
     background-color: #8C2703;
 }
-.prods {
+.prods{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     flex-direction: column;
-    align-items: center;
-    width: 18rem;
+    align-items: left;
+    width: 220px;
     background-color: #ffffff;
-    height: 25rem;
+    height: 350px;
     border-radius: 6px;
-    border: solid 2px black ;
+    padding: 5%;
+    box-shadow: 0px 0px 5px 1px whitesmoke ;
+    
+    
 }
 .compr{
     color: white;
@@ -206,16 +246,23 @@ nav a{
 
 }
 .prods img{
-    padding: 5%;
+    
 }.prods p{
-    padding: 5%;
-    text-align: center;
+    margin-top: 10px;
+    text-align: left;
+}.prods h2{
+    font-size: 12pt;
+    color: #8C4E03;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
 }
 .compr{
-    background-color: #0D0D0D;
+    background-color: #8C2703;
     width: 200px;
-    height: 40px;
-    border-radius: 6px;
+    height: 38px;
+    border-radius: 6px; 
+    font-weight: normal;
 
 }
 .compr p{
@@ -232,11 +279,36 @@ nav a{
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-items: center;
-    background-image: url(imgs/91579\ inver.png);
+    background-image: url(imgs/1440x900.png);
     background-position: center;
     background-size: cover;
 
 
+}
+.oferta10{
+    color: white;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.466);
+}
+.formulario p{
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+.formulario input{
+    padding: 15px 15px;
+    border-radius: 6px;
+    background-color: white;
+    width: 260px;
+    
+    
+}
+#form_btn{
+    color: white;
+    background-color: #0D0D0D;
+    width: 260px;
+}
+.formulario{
+    color: white;
+    padding: 5px;
 }
 .btnConvite{
     background: var(--color_barras);
@@ -299,6 +371,55 @@ footer{
 .navSociais img{
     padding-left: 5px;
 }
+.prods-box{
+    
+    border-radius: 6px;
+    height: 240px;
+    width: 270px;
+    padding: 2%;
+    display: grid;
+    grid-template-columns: 2fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    
+    "foto name"
+    "foto name"
+    "botão botão"
+    ;
+    
+    
+}
+.txt1{
+    color: #0D0D0D;
+    grid-area: name;
+    padding: 5px;
+    text-align: left;
+}
+.txt1 h3{
+    margin-top: 60px;
+
+}
+.prods-box h3{
+    color: #8C4E03;
+    
+}
+.prods-box a{
+    background-color: #8C2703;
+    padding: 10px 10px;
+    margin-top: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 6px;
+    grid-area: botão;
+}.prods-box img{
+    
+    width:100%;
+    
+}
+#form_btn{
+    
+}
 @media(max-width: 1040px){
     .categorias{
         overflow-x: scroll;
@@ -316,7 +437,13 @@ footer{
     .visita{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
-        background-image: url(imgs/91579\ Mbl.png);
+        background-image: url(imgs/1440x900.png);
+    }
+    .formulario{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .convite{
         text-align: center;
@@ -332,5 +459,9 @@ footer{
     }
     .navMobile{
         display: block;
+
+    }
+    .categorias_2{
+        overflow-x: scroll;
     }
 }
