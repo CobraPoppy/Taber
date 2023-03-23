@@ -53,17 +53,14 @@ nav a{
     background-color: var(--color_brown);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.1fr 0.3fr 0.1fr 0.7fr 0.1fr 1fr 0.1fr 1fr;
+    grid-template-rows: 0.1fr 1fr 0.1fr 1fr ;
     
     grid-template-areas:
         'header header'
         "banner banner"
         "subtitle subtitle"
         "categorias categorias"
-        "subtitle2 subtitle2"
-        "produtos produtos"
-        "subtitle3 subtitle3"
-        "visita visita"
+        
     ; 
     
 }
@@ -73,10 +70,27 @@ nav a{
     margin: 0;
     padding: 0;
     border: 0;
-    background-color: var(--color_brown);
+    background-color: white;
     
     
     
+}
+.banner h2{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 40px;
+}
+.Text_contato{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: 5%;
+
+}
+.Text_contato img{
+    width: 50%;
 }
 .categorias{
     grid-area: categorias;
@@ -93,21 +107,34 @@ nav a{
     grid-area: visita;
     
 }
+.descrt img{
+    width: 5%;
+}
 .categorias{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr  ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 3%;
+    
     
     align-items: center;
     justify-items: center;
+    padding: 3%;
     
-    padding: 5%;
-    gap: 20px;
-    box-shadow: 0px 0px 10px 1px inset black;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    
+   
     
     
     
+
+}
+.categorias input{
+    padding:15px;
+    border-radius: 6px;
+    margin: 0;
+    background-color: #0D0D0D;
+    width: 30%;
+    color: white;
 
 }
 .categorias_2::-webkit-scrollbar{
@@ -132,49 +159,6 @@ nav a{
     
 }
 
-
-.categorias_2{
-    background-color: white;
-
-    width: 100%;
-    height: 180px;
-    padding: 5px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 10px;
-    justify-items: center;
-    align-items: center;
-    overflow-y: hidden;
-    
-       
-
-}
-
-.categ_inicio{
-    background-size: cover;
-    background-position: center;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-    padding: 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.categ_inicio img{
-    width: 100%;
-}
-.box_categoria_inicio{
-    
-    text-align: center;
-    font-size: 10pt;
-    font-weight: normal;
-   
-
-}
-.categ_inicio p{
-    
-}
 .btns{
   padding: 1rem;
 }
@@ -201,13 +185,13 @@ nav a{
 }
 .subtitle3 h3{
     color: white;
+    
 }
 .subtitle2{
     grid-area: subtitle2;
     display: flex;   
     justify-content: space-around;
-    align-items: center; 
-    background-color: white;
+    align-items: center;
 }
 .subtitle{
     grid-area: subtitle;
@@ -215,13 +199,19 @@ nav a{
     
     justify-content: space-around;
     align-items: center;
-    background-color: white;
+    
 }
-.subtitle h3{
-    color: white;
-    font-size: 12pt;
+.subtitle {
+    color: rgb(0, 0, 0);
+    
     padding: 10px;
     font-weight: normal;
+    background-color: white;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+.subtitle h2{
+    color: #000;
 }
 .produtos{
     display: grid;
@@ -243,25 +233,7 @@ nav a{
     background-color: #8C2703;
     
 }
-.prods{
-    display: flex;
-    justify-content: left;
-    flex-direction: column;
-    align-items: left;
-    width: 220px;
-    
-    height: 380px;
-    border-radius: 6px;
-    padding: 5%;
-    box-shadow: 0px 0px 5px 1px whitesmoke ;
-    
-    
-    
-}
-.prods div img{
-    width: 100%;
-    
-}
+
 .compr{
     color: white;
     font-size: 12pt;
@@ -270,39 +242,19 @@ nav a{
 }
 
     
-.prods p{
-    margin-top: 10px;
-    text-align: left;
-}
-.prods h2{
-    font-size: 12pt;
-    color: #8C4E03;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    
-}
+
 .compr{
-    background-color: #FFD952;
+    background-color: #8C2703;
     width: 200px;
     height: 38px;
     border-radius: 6px; 
     font-weight: normal;
 
 }
-
-
-.price h2{
-    color: #591202;
+.compr p{
+    color: white;
 }
-.price input{
-    color: #591202;
-}
-.box-prods{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 
-}
 .visita{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -332,7 +284,7 @@ nav a{
 }
 #form_btn{
     color: white;
-    background-color: #591202;
+    background-color: #8C2703;
     width: 260px;
 }
 .formulario{
@@ -413,28 +365,7 @@ footer p{
 .navSociais img{
     padding-left: 5px;
 }
-.prods-box{
-    background-color:white;
-    border-radius: 6px;
-    height: 240px;
-    width: 270px;
-    padding: 2%;
-    display: grid;
-    grid-template-columns: 2fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: 
-    
-    "foto name"
-    "foto name"
-    "botão botão"
-    ;
-    
-    
-}
-.prods-box a{
-    color: #591202;
-    background-color: #FFD952;
-}
+
 .txt1{
     color: #0D0D0D;
     grid-area: name;
@@ -445,28 +376,8 @@ footer p{
     margin-top: 60px;
 
 }
-.prods-box h3{
-    color: #591202;
-    
-}
-.prods-box a{
-    color: #591202;
-    background-color: #FFD952;
-    padding: 10px 10px;
-    margin-top: 5px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 6px;
-    grid-area: botão;
-}.prods-box img{
-    
-    width:100%;
-    
-}
-.compr input{
-    color: #591202;
-    background-color: #FFD952;
-}
+
+
 footer{
     display: flex;
     padding: 20px;
@@ -475,13 +386,25 @@ footer{
     font-weight: lighter;
 
 }
-.paragrafo_sobrenos{
-    
-}
-@media(max-width: 1040px){
-    .categorias{
-        overflow-x: scroll;
 
+@media(max-width: 1040px){
+    .site{
+        background-color: var(--color_brown);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.1fr 0.3fr 0.1fr 1fr ;
+
+
+    }
+    .categorias input{
+        padding:15px;
+        border-radius: 6px;
+        margin: 0;
+        background-color: #0D0D0D;
+        width: 80%;
+        color: white;
+        gap: 0;
+    
     }
     .produtos{
         overflow-x: scroll;
@@ -524,5 +447,24 @@ footer{
     }
     .categorias_2{
         overflow-x: scroll;
+    }
+    .Text_contato{
+        grid-template-columns: 1fr;
+
+    }.Text_contato img{
+        padding-top: 20px;
+    }
+    .categorias{
+       
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr  ;
+        overflow-y: hidden;
+    }
+    .descrt{
+        
+        padding: 10%;
+    }
+    .descrt img{
+        width: 5%;
     }
 }

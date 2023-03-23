@@ -49,11 +49,12 @@ nav a{
     
 
 }
+
 .site{
     background-color: var(--color_brown);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.1fr 0.3fr 0.1fr 0.7fr 0.1fr 1fr 0.1fr 1fr;
+    grid-template-rows: 0.1fr 2fr 0.1fr 1fr 0.1fr ;
     
     grid-template-areas:
         'header header'
@@ -61,9 +62,9 @@ nav a{
         "subtitle subtitle"
         "categorias categorias"
         "subtitle2 subtitle2"
-        "produtos produtos"
-        "subtitle3 subtitle3"
-        "visita visita"
+        
+        
+        
     ; 
     
 }
@@ -74,9 +75,65 @@ nav a{
     padding: 0;
     border: 0;
     background-color: var(--color_brown);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas: 
+        'tor desc'
+        'img img'
+    ;
     
     
     
+    
+}
+.descr_item{
+    background-color: #F9F4E4;
+    padding: 5%;
+    height: 100%;
+    width: 100%;
+    grid-area: desc;
+}
+.descr_item input{
+    border: solid 1px black;
+    border-radius: 6px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 15px 105px;
+    
+}
+.descr_item input:hover{
+    background-color: #FFD952;
+    color: #591202;
+    border: none;
+}
+.descr_item h3{
+    margin-top: 40px;
+}
+.img_item{
+    background-color: #F9F4E4;
+    margin: 0 auto;
+    padding: 5%;
+    height: 100%;
+    width: 100%;
+    grid-area: img;
+    
+}
+.Janela{
+    padding: 5%;
+    background-color:#F9F4E4;
+    width: 100%;
+}
+
+
+
+
+.tor{
+    width: 100%;
+    grid-area: img;
+
 }
 .categorias{
     grid-area: categorias;
@@ -172,9 +229,7 @@ nav a{
    
 
 }
-.categ_inicio p{
-    
-}
+
 .btns{
   padding: 1rem;
 }
@@ -206,8 +261,7 @@ nav a{
     grid-area: subtitle2;
     display: flex;   
     justify-content: space-around;
-    align-items: center; 
-    background-color: white;
+    align-items: center;
 }
 .subtitle{
     grid-area: subtitle;
@@ -215,7 +269,7 @@ nav a{
     
     justify-content: space-around;
     align-items: center;
-    background-color: white;
+    background-color: #100B09;
 }
 .subtitle h3{
     color: white;
@@ -249,17 +303,12 @@ nav a{
     flex-direction: column;
     align-items: left;
     width: 220px;
-    
-    height: 380px;
+    background-color: #ffffff;
+    height: 350px;
     border-radius: 6px;
     padding: 5%;
     box-shadow: 0px 0px 5px 1px whitesmoke ;
     
-    
-    
-}
-.prods div img{
-    width: 100%;
     
 }
 .compr{
@@ -282,20 +331,15 @@ nav a{
     
 }
 .compr{
-    background-color: #FFD952;
+    background-color: #8C2703;
     width: 200px;
     height: 38px;
     border-radius: 6px; 
     font-weight: normal;
 
 }
-
-
-.price h2{
-    color: #591202;
-}
-.price input{
-    color: #591202;
+.compr p{
+    color: white;
 }
 .box-prods{
     display: flex;
@@ -332,7 +376,7 @@ nav a{
 }
 #form_btn{
     color: white;
-    background-color: #591202;
+    background-color: #8C2703;
     width: 260px;
 }
 .formulario{
@@ -404,7 +448,7 @@ footer p{
 .navSociais{
     align-items: center;
     justify-content: center;
-    background-color: #591202;
+    background-image: var(--color_barras);
     width: 100%;
     display: flex;
     height: 2rem;
@@ -431,10 +475,6 @@ footer p{
     
     
 }
-.prods-box a{
-    color: #591202;
-    background-color: #FFD952;
-}
 .txt1{
     color: #0D0D0D;
     grid-area: name;
@@ -450,23 +490,24 @@ footer p{
     
 }
 .prods-box a{
-    color: #591202;
     background-color: #FFD952;
     padding: 10px 10px;
     margin-top: 5px;
     text-align: center;
     text-decoration: none;
+    color: #591202;
     border-radius: 6px;
     grid-area: botão;
-}.prods-box img{
+}
+.prods-box a:hover{
+    background-color: #0D0D0D;
+}
+.prods-box img{
     
     width:100%;
     
 }
-.compr input{
-    color: #591202;
-    background-color: #FFD952;
-}
+
 footer{
     display: flex;
     padding: 20px;
@@ -485,6 +526,10 @@ footer{
     }
     .produtos{
         overflow-x: scroll;
+    }
+    .banner{
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr;
     }
     body{
         overflow-x: hidden;

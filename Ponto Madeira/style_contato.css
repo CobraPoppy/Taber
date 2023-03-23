@@ -22,7 +22,7 @@
     display: none;
 }
 header{
-    background-color:#100B09;
+    background-color:#591202;
     height: 70px;
     display: flex;
     align-items: center;
@@ -53,17 +53,14 @@ nav a{
     background-color: var(--color_brown);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.1fr 0.3fr 0.1fr 0.7fr 0.1fr 1fr 0.1fr 1fr;
+    grid-template-rows: 0.1fr 0.3fr 0.1fr 0.9fr ;
     
     grid-template-areas:
         'header header'
         "banner banner"
         "subtitle subtitle"
         "categorias categorias"
-        "subtitle2 subtitle2"
-        "produtos produtos"
-        "subtitle3 subtitle3"
-        "visita visita"
+        
     ; 
     
 }
@@ -78,8 +75,19 @@ nav a{
     
     
 }
-.Sobrenos img{
-    display: inline;
+.banner h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3%;
+}
+.Text_contato{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: 5%;
+
 }
 .categorias{
     grid-area: categorias;
@@ -98,19 +106,27 @@ nav a{
 }
 .categorias{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr  ;
+    grid-template-columns: 1fr ;
+    
     
     align-items: center;
     justify-items: center;
+    padding: 3%;
     
-    padding: 5%;
-    gap: 20px;
-    box-shadow: 0px 0px 10px 1px inset black;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    
+   
     
     
     
+
+}
+.categorias input{
+    padding:15px;
+    border-radius: 6px;
+    margin: 0;
+    background-color: #0D0D0D;
+    width: 30%;
+    color: white;
 
 }
 .categorias_2::-webkit-scrollbar{
@@ -134,11 +150,6 @@ nav a{
     width: 15rem;
     
 }
-
-
-
-
-
 
 .btns{
   padding: 1rem;
@@ -207,20 +218,7 @@ nav a{
     background-color: #8C2703;
     
 }
-.prods{
-    display: flex;
-    justify-content: left;
-    flex-direction: column;
-    align-items: left;
-    width: 220px;
-    background-color: #ffffff;
-    height: 350px;
-    border-radius: 6px;
-    padding: 5%;
-    box-shadow: 0px 0px 5px 1px whitesmoke ;
-    
-    
-}
+
 .compr{
     color: white;
     font-size: 12pt;
@@ -229,17 +227,7 @@ nav a{
 }
 
     
-.prods p{
-    margin-top: 10px;
-    text-align: left;
-}
-.prods h2{
-    font-size: 12pt;
-    color: #8C4E03;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    
-}
+
 .compr{
     background-color: #8C2703;
     width: 200px;
@@ -251,12 +239,7 @@ nav a{
 .compr p{
     color: white;
 }
-.box-prods{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 
-}
 .visita{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -358,7 +341,7 @@ footer p{
 .navSociais{
     align-items: center;
     justify-content: center;
-    background-image: var(--color_barras);
+    background-color: #591202;
     width: 100%;
     display: flex;
     height: 2rem;
@@ -367,24 +350,7 @@ footer p{
 .navSociais img{
     padding-left: 5px;
 }
-.prods-box{
-    background-color:white;
-    border-radius: 6px;
-    height: 240px;
-    width: 270px;
-    padding: 2%;
-    display: grid;
-    grid-template-columns: 2fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: 
-    
-    "foto name"
-    "foto name"
-    "botão botão"
-    ;
-    
-    
-}
+
 .txt1{
     color: #0D0D0D;
     grid-area: name;
@@ -395,27 +361,8 @@ footer p{
     margin-top: 60px;
 
 }
-.prods-box h3{
-    color: #8C4E03;
-    
-}
-.prods-box a{
-    background-color: #8C2703;
-    padding: 10px 10px;
-    margin-top: 5px;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    border-radius: 6px;
-    grid-area: botão;
-}.prods-box img{
-    
-    width:100%;
-    
-}
-#form_btn{
-    
-}
+
+
 footer{
     display: flex;
     padding: 20px;
@@ -424,13 +371,25 @@ footer{
     font-weight: lighter;
 
 }
-.paragrafo_sobrenos{
-    
-}
-@media(max-width: 1040px){
-    .categorias{
-        overflow-x: scroll;
 
+@media(max-width: 1040px){
+    .site{
+        background-color: var(--color_brown);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.1fr 0.3fr 0.1fr 0.6fr ;
+
+
+    }
+    .categorias input{
+        padding:15px;
+        border-radius: 6px;
+        margin: 0;
+        background-color: #0D0D0D;
+        width: 80%;
+        color: white;
+        gap: 0;
+    
     }
     .produtos{
         overflow-x: scroll;
@@ -473,5 +432,11 @@ footer{
     }
     .categorias_2{
         overflow-x: scroll;
+    }
+    .Text_contato{
+        grid-template-columns: 1fr;
+
+    }.Text_contato img{
+        padding-top: 20px;
     }
 }
