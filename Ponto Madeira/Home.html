@@ -133,4 +133,15 @@
         </footer>
     
 </body>
+<script>
+    const links = document.querySelectorAll('.btns a');
+  let currentLinkIndex = 0;
+
+  function simulateClick() {
+    links[currentLinkIndex].click();
+    currentLinkIndex = (currentLinkIndex + 1) % links.length;
+  }
+
+  setInterval(simulateClick, 4000);
+  </script>
 </html>

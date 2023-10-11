@@ -12,12 +12,12 @@
         <section>
             <h2>Cadastro</h2>
             <p>Nome</p>
-            <input type="name" placeholder="Nome">
+            <input type="name" id="name" placeholder="Nome">
 
             <p>E-mail</p>
-            <input type="email" placeholder="Email"  rel="noopener">
+            <input type="email" id="email" placeholder="Email"  rel="noopener">
             <p>Senha</p>
-            <input type="password" placeholder="Senha" id="#" rel="noopener">
+            <input type="password" placeholder="Senha" id="password" rel="noopener">
         </section>
         <section class="btn">
             
@@ -35,6 +35,54 @@
 
 
     </div>
+    <script>
+        // Obtenha referências aos elementos do formulário
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const checkbox = document.getElementById('check');
+        const confirmButton = document.getElementById('conf');
+    
+        // Adicione um evento de clique ao botão "Confirm"
+        confirmButton.addEventListener('click', () => {
+            // Validações
+            if (nameInput.value.trim() === '') {
+                alert('Por favor, insira seu nome.');
+                return;
+            }
+    
+            if (!isValidEmail(emailInput.value)) {
+                alert('Por favor, insira um endereço de e-mail válido.');
+                return;
+            }
+    
+            if (passwordInput.value.length < 6) {
+                alert('A senha deve ter pelo menos 6 caracteres.');
+                return;
+            }
+    
+            if (!checkbox.checked) {
+                alert('Você deve concordar com os termos de política de privacidade.');
+                return;
+            }
+    
+            // Se todas as validações passarem, você pode salvar os dados no backend ou em algum lugar de sua escolha
+            const userData = {
+                name: nameInput.value,
+                email: emailInput.value,
+                password: passwordInput.value,
+            };
+    
+            // Exemplo de como você pode lidar com os dados, por exemplo, enviá-los para o servidor
+            console.log('Dados do usuário:', userData);
+        });
+    
+        // Função para validar o formato de e-mail
+        function isValidEmail(email) {
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            return emailPattern.test(email);
+        }
+    </script>
     
 </body>
 </html>
