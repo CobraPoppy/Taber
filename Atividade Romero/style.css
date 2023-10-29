@@ -1,0 +1,134 @@
+*{
+    padding: a0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    
+
+}
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "nav-bar nav-bar nav-bar"
+        "left-nav mid-nav mid-nav"
+        "left-nav  mid-nav mid-nav"
+        "botton-footer botton-footer botton-footer"
+    ;
+    gap: 10px;
+    height: 150vh;
+}
+#nav-bar{
+    grid-area: nav-bar;
+    background-image: linear-gradient(to bottom, #2ba130, #4dad2f, #69b82f, #84c430, #9ecf31);
+    
+    
+}
+#Titulo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    color: whitesmoke;
+    
+
+
+
+}
+#left-nav{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+   
+}
+#left-nav>img{
+    padding: 10px;
+    margin-top: 30px;
+}
+#left-nav>ul{
+    list-style: none;
+    padding: 30px;  
+
+}
+#left-nav>ul>li{
+    padding-bottom: 20px;
+    padding: 10px;
+    background-color: #2ba130;
+    border: solid 1px white;
+}
+#Titulo>h3{
+    text-align: justify;
+}
+#Titulo-1{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    padding: 20px;
+}
+#Titulo-1>ul>li>a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+#nav-2{
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    gap: 10px;
+   list-style: none;
+   text-align: justify;
+
+
+}
+#nav-bar>ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+}
+#left-nav{
+    grid-area: left-nav;
+    background-color: azure;
+    padding: 10px;
+}
+#mid-nav{
+    grid-area: mid-nav;
+    background-color: antiquewhite;
+    padding: 10px;
+}
+#botton-footer{
+    grid-area: botton-footer;
+    background-color: aliceblue;
+    padding: 10px;
+}
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    height: 40px;
+    background-color: aliceblue;
+    
+    
+}
+.nav>ul>li>a{
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(82, 81, 81);
+    font-size: 12px;
+    
+}
+.nav>ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+}
+#banner>h2{
+    color: black;
+}
