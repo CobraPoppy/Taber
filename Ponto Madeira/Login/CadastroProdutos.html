@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="William e Yury">
+    <meta name="description" content="Cadastro de Produto no Sistema do Ponto Madeira">
+    <title> Cadastrar Produto </title>
+    <link rel="stylesheet" href="styleCadastroPordutos.css">
+    
+    <!-- Coloque o CSS da página aqui -->
+
+</head>
+<body>
+
+    <!-- Coloque o cabeçalho do seu site aqui dentro dessa tag semântica de cabeçalho -->
+    <header>
+        <a href=""><h3>.<strong>Ponto</strong>Madeira</h3></a>
+        <nav class="barraNav">
+                
+                <a href="Home.html">HOME</a>
+                <a href="QuemSomos.html">QUEM SOMOS</a>
+                <a href="Produto.html">PRODUTOS</a>
+                <a href="Contato.html">CONTATOS</a>
+                <a href=""><img src="imgs/mdi_shopping-outline.png" alt=""></a>
+                <a href="Login/LOGIN.html"><img src="imgs/mdi_user-circle-outline.png" alt=""></a>
+
+                <img class="navMobile" src="imgs/🦆 icon _menu_ (1).png" alt="">
+                
+        </nav>
+
+
+    </header>
+
+    <!-- Essa tag semântica indica que o conteúdo principal da página se encontra dentro dela. -->
+    <main>
+        <section>
+
+        <h1> Cadastrar Produto </h1>
+
+        <!-- tag "form" que é a estrutura principal de um formulário. Nela, há o atributo "action" que tem como função enviar as informações do formulário preenchidos para a página que você colocar no valor que está entre aspas, ou seja, quando for clicado no botão de enviar, cada dado de cada input serão enviados para a página que você colocar dentro das aspas. Enquanto o atributo "method" significa por meio de que essas informações do formulário vão ser enviados, nesse caso por meio do método "POST" que é o mais seguro que o GET por não mostrar os dados do formulário na url do site no navegador, por exemplo. -->
+        <form action="cadastrarProdutoNoBanco.php" method="POST">
+            
+            <label> Nome do Produto: </label>
+            <input type="text" name="nomeProduto" placeholder="O nome terá no máximo 50 caracteres." required maxlength="50"> <!-- o atributo "required" quer dizer que esse input é obrigatório, ou seja, não pode ficar vazio, precisa ser preenchido. Se ficar vazio, o formulário não será enviado. -->
+            
+            <label> Valor do Produto </label>
+            <input type="number" name="valorProduto" placeholder="Digite o valor do produto." required>
+            
+            <!-- Use essa estrutura se os produtos do seu site for variados, tipo móveis, ferramentas, etc. 
+                nas "option" você coloca as opções de categoria, e quando o usuário deixar selecionado alguma dessas opções, o valor dessa categoria escolhida vai para tag "select". -->
+            <label> Categoria do Produto </label>
+            <select name="categoriaProduto" required >
+                <option value="Artigos valiosos" > Artigos valiosos </option>
+                <option value="Moveis"> Moveis </option>
+                <option value="Madeira"> Madeira </option>
+                <option value="Tintas"> Tintas </option>
+                <option value="Verníz"> Verníz </option>
+            </select>
+
+            <label> Imagem do Produto </label>
+            <input type="file" name="imagemProduto" required>
+
+            <label id="pp"> Descrição do Produto </label >
+            <textarea name="descricaoProduto" id="entradaDaDescricao" cols="10" rows="20" placeholder="Descreva o produto (máximo 300 caracteres)." required maxlength="300">
+            </textarea>
+
+            <label> Cor do Produto </label>
+            <input type="text" name="corProduto" placeholder="Informe a cor do produto." required>
+
+            <label> Marca do Produto </label>
+            <input type="text" name="marcaProduto" placeholder="Informe a marca do produto." required>
+
+            <!-- O atributo type="submit" significa que quando o usuário clicar nesse botão e o formulário tiver com todos os campos preenchidos, então vai acontecer um "submit", ou seja, os atributos que estão dentro da tag "form" ali em cima vão ser ativados.  -->
+            <button type="submit"> Anunciar Produto </button>
+            
+        </form>
+
+        </section>
+    </main>
+   
+
+    <footer id="footer">
+    </footer>
+</body>
+
+
+</html>
